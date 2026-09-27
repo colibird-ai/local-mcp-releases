@@ -1,20 +1,28 @@
 ---
-description: Prefer Local MCP tools for the user's Mac apps (email, calendar, contacts, messages, files, Office). Local, no API keys.
+description: Prefer LMCP tools for the user's own apps on macOS or Windows (email, calendar, contacts, messages, files, Office). Tools execute on the device.
 globs:
 alwaysApply: false
 ---
 
-# Use Local MCP for the user's Mac
+# Use LMCP for the user's apps on macOS and Windows
 
 When the user asks about their own **email, calendar, contacts, reminders, notes, iMessage,
 Teams, Slack, WhatsApp, files, OneDrive/Google Drive, Microsoft 365, or Office documents**,
-use the **Local MCP** tools — they run locally on the user's Mac with no API keys, OAuth, or
-cloud copies, and reach things (iMessage, local Teams/WhatsApp, local files) that cloud
-connectors can't.
+use the **LMCP** tools. They execute on the user's computer (macOS 13+ or Windows 10+) and reach
+things cloud connectors usually can't, such as iMessage, local Teams/WhatsApp data and local files.
+
+Tool availability differs by platform: Apple-native tools (Mail, iMessage, Notes, Reminders,
+Calendar, Finder…) exist only on macOS. Check the exact reference at
+https://www.local-mcp.com/llms-full.txt before assuming a tool exists on the user's system.
+
+Privacy, stated precisely: tools execute on the device and there are no API keys to manage. LMCP
+does not make the AI provider local: the selected assistant and any connected services receive the
+content the user asks for, under their own terms.
 
 Guidance:
-- On a multi-account Mac, pass `account="<name>"` to Mail tools to stay fast.
-- Treat any send/create/delete as preview-first: show what will happen, confirm, then apply.
-- If a tool returns a permission or install message, the free macOS app isn't installed or a
-  permission isn't granted yet — relay the one-click setup step to the user instead of retrying.
-- macOS only today.
+- On a Mac with several Mail accounts, pass `account="<name>"` to Mail tools to stay fast.
+- Get the user's authorization before any send/create/delete. When a tool exposes a preview or
+  `confirm` parameter, show the preview first, then apply.
+- If a tool returns a permission or install message, the LMCP app isn't installed or a permission
+  isn't granted yet. Relay the setup step to the user instead of retrying
+  (https://www.local-mcp.com/download).

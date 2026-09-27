@@ -1,14 +1,14 @@
 # LMCP — Context and Actions for Your AI
 
 [![npm](https://img.shields.io/npm/v/local-mcp)](https://www.npmjs.com/package/local-mcp)
-[![macOS](https://img.shields.io/badge/macOS-13%2B-blue)](https://local-mcp.com/download?ref=github-releases)
-[![Windows](https://img.shields.io/badge/Windows-10%2B-blue)](https://local-mcp.com/download?ref=github-releases)
+[![macOS](https://img.shields.io/badge/macOS-13%2B-blue)](https://www.local-mcp.com/download?ref=github-releases)
+[![Windows](https://img.shields.io/badge/Windows-10%2B-blue)](https://www.local-mcp.com/download?ref=github-releases)
 
 **Give your AI the context to get things done.** LMCP connects compatible assistants to your apps and accounts through the Model Context Protocol (MCP). Bring together relevant information from email, messages, calendars and files, then use tools to turn that context into useful action — with less searching and copying between apps.
 
 Use it with **Claude, ChatGPT, Codex, Cursor** and other compatible MCP clients. Available integrations and connection methods vary by assistant, platform and permissions.
 
-**[Download for Mac or Windows →](https://local-mcp.com/download?ref=github-releases)** · **[Explore the product](https://local-mcp.com/mcp-context)** · **[Setup guides](https://local-mcp.com/guides)**
+**[Download for Mac or Windows →](https://www.local-mcp.com/download?ref=github-releases)** · **[Explore the product](https://www.local-mcp.com/mcp-context)** · **[Setup guides](https://www.local-mcp.com/guides)**
 
 This repository contains release information, documentation and the npm wrapper. The core binary is proprietary; documentation and scripts have their own license — see [LICENSE](LICENSE).
 
@@ -30,7 +30,7 @@ Explore email, calendars, contacts, messages, tasks, files, documents, browser a
 
 **Not every integration is available on both operating systems.** Apple-native tools require macOS; connected services may need their own sign-in or permissions. Some tools use locally cached or synced data rather than a complete cloud account.
 
-For current tools, requirements and platform coverage, use the **[tool reference](https://local-mcp.com/tools)** and **[guides](https://local-mcp.com/guides)** rather than a fixed count in this README.
+For current tools, requirements and platform coverage, use the **[tool reference](https://www.local-mcp.com/tools)** and **[guides](https://www.local-mcp.com/guides)** rather than a fixed count in this README.
 
 ## See it work
 
@@ -38,21 +38,29 @@ For current tools, requirements and platform coverage, use the **[tool reference
   <img src="assets/claude-web-demo.gif" alt="Claude.ai using LMCP tools on a Mac to create a note and a reminder, including a consent dialog" width="700">
 </p>
 
-The recording shows a Mac workflow through Cloud Relay, not every platform or integration.
+The recording shows a Mac workflow through Cloud Data Forwarding, not every platform or integration.
 
 ## Install and connect
 
-1. **[Download LMCP for your operating system](https://local-mcp.com/download?ref=github-releases).** Follow the installer and onboarding steps.
+1. **[Download LMCP for your operating system](https://www.local-mcp.com/download?ref=github-releases).** Follow the installer and onboarding steps.
 2. Select your assistant and enable the compatible integrations you want to use.
 3. Grant required permissions or sign in where needed, then follow the assistant-specific setup guide.
 
-Supports **macOS 13+** and **Windows 10+**. Linux is not currently offered as a supported installer platform.
+Supports **macOS 13+** and **Windows 10+ (64-bit)**. Linux, iOS and Android are not supported yet; join the waitlist on the **[download page](https://www.local-mcp.com/download?ref=github-releases)**.
 
-Local desktop/CLI clients and web assistants connect differently. The installer can configure supported local clients; web assistants use optional Cloud Relay and their connector settings. Follow the **[current guides](https://local-mcp.com/guides)** rather than an old token-pasting sequence.
+Choose one installation path:
 
-The canonical MCP endpoint for supported web connections is **`https://local-mcp.com/mcp`**. An endpoint alone is not a verified connection: complete authorization and check that tools are available in your client.
+- **Signed installer** for Mac (`.pkg`) or Windows: **[download page](https://www.local-mcp.com/download?ref=github-releases)**.
+- **macOS terminal:** `curl -fsSL 'https://www.local-mcp.com/install?ref=github-releases' | bash`
+- **Windows PowerShell:** `irm https://www.local-mcp.com/install-windows?ref=github-releases | iex` (per-user, no administrator rights or Node.js needed).
+- **Claude Desktop extension:** one-click `.mcpb` at **[www.local-mcp.com/install/mcpb](https://www.local-mcp.com/install/mcpb)**.
+- **npm (requires Node.js):** `npx -y local-mcp@latest setup` configures the compatible clients it detects.
 
-For terminal installation and npm usage, follow the **[installation documentation](https://local-mcp.com/help/installation)**. Do not assume the npm wrapper and native installers have identical platform support.
+Details for agents and each path: **[llms-install.md](llms-install.md)**. After installing, fully restart your AI client; MCP tools load at startup.
+
+Local desktop/CLI clients and web assistants connect differently. The installer configures the compatible local clients it detects. Web assistants (ChatGPT, Claude.ai, Grok, Perplexity) connect through **`https://www.local-mcp.com/mcp`** as a custom connector with OAuth. They need the local app installed and Cloud Data Forwarding enabled in LMCP (off by default); with forwarding off, the connector exposes only `setup_install`. Follow the **[web AI guide](https://www.local-mcp.com/guides/web-ai)** and the **[current guides](https://www.local-mcp.com/guides)**.
+
+An endpoint alone is not a verified connection: complete authorization and check that tools are available in your client.
 
 ## How it works
 
@@ -63,27 +71,27 @@ Compatible tools execute on your computer. Some read native data, local caches o
 ## Local tools, clear data boundaries
 
 - Local execution does not mean a cloud AI receives no data. Your chosen assistant or connected service may receive content needed for your request, including when a desktop client uses a cloud model.
-- Cloud Relay is optional and lets supported web assistants reach tools on your computer. Review its data flow and provider policies before enabling it.
+- Cloud Data Forwarding is optional, off by default, and lets supported web assistants reach tools on your computer. Review its data flow and provider policies before enabling it.
 - Permissions, preview and confirmation support vary by tool. Review behavior and authorize actions before execution; do not assume a universal confirmation dialog.
 - Locally available read operations may work offline. Cloud models, connected services, sending and remote updates can require a network connection.
 
-See **[Privacy](https://local-mcp.com/en/privacy)** and **[Security](SECURITY.md)**. Compliance depends on your complete workflow and provider agreements, not only on where a tool runs.
+See **[Privacy](https://www.local-mcp.com/en/privacy)** and **[Security](SECURITY.md)**. Compliance depends on your complete workflow and provider agreements, not only on where a tool runs.
 
 ## Learn more
 
-- **[Apple Mail with Claude](https://local-mcp.com/guides/claude-email-mac)**
-- **[ChatGPT on Mac](https://local-mcp.com/guides/chatgpt-mac)**
-- **[Microsoft Teams without Graph API](https://local-mcp.com/guides/claude-teams-no-api)**
-- **[WhatsApp on Mac](https://local-mcp.com/guides/claude-whatsapp-mac)**
-- **[Recipes and workflows](https://local-mcp.com/recipes)**
+- **[Apple Mail with Claude](https://www.local-mcp.com/guides/claude-email-mac)**
+- **[ChatGPT, Claude.ai, Grok and Perplexity on the web](https://www.local-mcp.com/guides/web-ai)**
+- **[Microsoft Teams without Graph API](https://www.local-mcp.com/guides/claude-teams-no-api)**
+- **[WhatsApp on Mac](https://www.local-mcp.com/guides/claude-whatsapp-mac)**
+- **[Recipes and workflows](https://www.local-mcp.com/recipes)**
 
 ## Releases and support
 
-See **[GitHub Releases](https://github.com/lanchuske/local-mcp-releases/releases)** for this repository's history and the **[download page](https://local-mcp.com/download?ref=github-releases)** for current installers. Mac and Windows can have different release versions; a GitHub tag alone is not a fleet-wide deployment signal.
+See **[GitHub Releases](https://github.com/lanchuske/local-mcp-releases/releases)** for this repository's history and the **[download page](https://www.local-mcp.com/download?ref=github-releases)** for current installers. Mac and Windows can have different release versions; a GitHub tag alone is not a fleet-wide deployment signal.
 
 - Report a problem through LMCP's available feedback tools or **[open an issue](https://github.com/lanchuske/local-mcp-releases/issues)**. Include OS and app version, and remove sensitive content from logs.
 - Request a feature through the available feedback tools or GitHub Issues.
 - Contact **[ctpo@colibird.co](mailto:ctpo@colibird.co)** for support; see [SECURITY.md](SECURITY.md) for vulnerabilities.
-- For current availability and commercial terms, see **[the website](https://local-mcp.com)** and [LICENSE](LICENSE). This README does not promise permanent pricing or future features.
+- For current availability and commercial terms, see **[the website](https://www.local-mcp.com)** and [LICENSE](LICENSE). This README does not promise permanent pricing or future features.
 
 If LMCP helps you, **[star the repository](https://github.com/lanchuske/local-mcp-releases)** to help others discover it.

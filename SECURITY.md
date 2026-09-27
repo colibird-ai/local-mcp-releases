@@ -6,13 +6,13 @@ LMCP exposes compatible app and service tools through MCP on macOS and Windows. 
 
 This public repository contains release documentation, the npm wrapper and configuration examples. The core binary is proprietary; see [LICENSE](LICENSE) for the separate terms for binaries and repository documentation/scripts.
 
-Get current installers from the [official download page](https://local-mcp.com/download?ref=github-releases). Follow your operating system's signature and security checks and the current installation guide. Do not bypass a security warning based on a README claim.
+Get current installers from the [official download page](https://www.local-mcp.com/download?ref=github-releases). Follow your operating system's signature and security checks and the current installation guide. Do not bypass a security warning based on a README claim.
 
 ## Where information goes
 
 - Compatible tools run on your computer and may use native app data, local caches or synced files. Other integrations connect to external services and can require sign-in and network access.
 - Tool results are returned to your chosen assistant. If that assistant uses a cloud model, relevant content may reach its provider even when the assistant is a desktop application. Local execution is not a guarantee that nothing leaves your computer.
-- Optional Cloud Relay provides a path for supported web assistants to reach tools on your computer. Requests and responses traverse that path. Review the current [privacy policy](https://local-mcp.com/en/privacy) and provider policies for handling and retention.
+- Optional Cloud Data Forwarding (off by default) provides a path for supported web assistants to reach tools on your computer. Requests and responses traverse that path. Review the current [privacy policy](https://www.local-mcp.com/en/privacy) and provider policies for handling and retention.
 - Diagnostic and feedback data are separate from ordinary tool results. Do not include credentials, private messages or other sensitive content in public issues or shared logs.
 
 This document does not assert universal zero retention, end-to-end encryption or regulatory compliance for every provider and integration. Assess the complete workflow and your organization's requirements.
