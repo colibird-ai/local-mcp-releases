@@ -4,10 +4,12 @@
     "lanchuske"
   ],
   "name": "Local MCP",
-  "description": "Native macOS MCP server with 188+ local tools — connect Claude Desktop, Cursor, Windsurf to Mail, Calendar, Contacts, Teams, OneDrive, Outlook, OmniFocus, Notes, Messages, Reminders, Finder, Safari, Word, Excel, PowerPoint, and PDF. Also runs on Windows. Privacy-first: all data stays on your machine, no API keys.",
+  "description": "MCP server for macOS and Windows with 188+ local tools — connect Claude Desktop, Cursor, Windsurf, ChatGPT, Claude.ai and other MCP clients to Mail, Calendar, Contacts, Teams, OneDrive, Outlook, OmniFocus, Notes, Messages, Reminders, Finder, Word, Excel, PowerPoint, and PDF. Tools execute on your computer with no API keys to manage; availability varies by platform, and your AI provider still receives the content you ask for.",
   "install": {
     "npm": "npx -y local-mcp@latest setup --ref=glama",
-    "curl": "curl -fsSL \"https://local-mcp.com/install?ref=glama\" | bash"
+    "curl": "curl -fsSL \"https://www.local-mcp.com/install?ref=glama\" | bash",
+    "windows": "irm https://www.local-mcp.com/install-windows?ref=glama | iex",
+    "mcpb": "https://www.local-mcp.com/install/mcpb"
   },
   "mcp": {
     "command": "npx",
@@ -26,6 +28,7 @@
   ],
   "tags": [
     "macos",
+    "windows",
     "mail",
     "calendar",
     "contacts",
@@ -37,7 +40,6 @@
     "messages",
     "reminders",
     "finder",
-    "safari",
     "word",
     "excel",
     "powerpoint",
