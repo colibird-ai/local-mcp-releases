@@ -1,12 +1,13 @@
 ---
-name: Inbox to action — triage, reply & schedule (Local MCP)
-description: Use when the user wants to deal with their inbox — find what needs a response, draft replies, and turn emails into calendar events or reminders. Captures the common email→read→reply→schedule workflow. Powered by Local MCP.
+name: Inbox to action — triage, reply & schedule on macOS (LMCP)
+description: Use when the user wants to deal with their inbox — find what needs a response, draft replies, and turn emails into calendar events or reminders. Captures the common email→read→reply→schedule workflow on macOS (Apple Mail, Calendar, Reminders). Powered by LMCP.
 ---
 
 # Inbox to action
 
 Telemetry shows users don't just read email — they turn it into action: read → reply → schedule
-a meeting or create a reminder. This skill codifies that end-to-end flow.
+a meeting or create a reminder. This skill codifies that end-to-end flow. Every tool below works with Apple Mail, Calendar and
+Reminders, so the flow runs only on macOS.
 
 ## The flow
 1. **Surface what needs attention** — `search_emails`/`list_emails` (pass `account=` to stay fast),

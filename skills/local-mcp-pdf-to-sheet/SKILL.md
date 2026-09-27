@@ -1,25 +1,25 @@
 ---
-name: PDF → spreadsheet — extract data into Excel (Local MCP)
-description: Use when the user wants to pull data out of one or more PDFs (invoices, bank/credit-card statements, receipts, reports, tables) and put it into a spreadsheet. pdf_read is one of the most-used tools; this codifies the read-PDF → structure → write-Excel workflow. Powered by Local MCP, on-device.
+name: PDF → spreadsheet — extract data into Excel (LMCP)
+description: Use when the user wants to pull data out of one or more PDFs (invoices, bank/credit-card statements, receipts, reports, tables) and put it into a spreadsheet. pdf_read is one of the most-used tools; this codifies the read-PDF → structure → write-Excel workflow. Powered by LMCP on macOS and Windows.
 ---
 
 # PDF → spreadsheet
 
-Reading PDFs and turning them into structured data is one of the highest-volume things Local MCP
-users do. This skill codifies the end-to-end flow: read the PDF(s) on the Mac, extract the rows,
-and build an Excel sheet — all locally, no upload.
+Reading PDFs and turning them into structured data is one of the highest-volume things LMCP
+users do. This skill codifies the end-to-end flow: read the PDF(s) on the user's computer (macOS or
+Windows), extract the rows, and build an Excel sheet. The tools execute on the device; the extracted
+text goes to the user's AI provider as part of the conversation.
 
 ## The flow
-1. **Read the PDF(s)** — `pdf_read(path=...)`. For long documents pass `max_pages` to bound it,
-   or call it per file. (Find the files first with `finder_search`/`fs_search` if the user only
-   describes them, e.g. "my March invoices".)
+1. **Read the PDF(s)** — `pdf_read(path=...)`, one call per file. (Find the files first with
+   `file_search`, or `finder_search` on macOS, if the user only describes them, e.g. "my March invoices".)
 2. **Extract the structured rows** from the text — identify the columns the user wants (e.g. for
    statements: Date, Description, Amount; for invoices: Vendor, Invoice #, Date, Total). Normalize
    dates and numbers. If several PDFs, combine into one consistent table.
 3. **Write the spreadsheet** — prefer one call:
    `excel_create(path="<out>.xlsx", headers=["Date","Description","Amount"], rows=[[...],[...]], confirm=true)`.
    `headers` is required; `rows` is the full data. For edits to an existing sheet use
-   `excel_write_cell(path, row, column, value, confirm=true)`; to read one back use `excel_read(path)`.
+   `excel_write_cell(path, cell="B2", value, confirm=true)`; to read one back use `excel_read(path)`.
 
 ## Good practice
 - Confirm the **columns** with the user before building the sheet ("I'll pull Date, Description,

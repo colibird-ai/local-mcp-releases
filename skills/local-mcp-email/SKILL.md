@@ -1,11 +1,11 @@
 ---
-name: Email on Mac (Local MCP)
-description: Use when the user wants to read, search, summarize, draft or triage their Apple Mail / Gmail / Outlook / iCloud email on a Mac. Powered by Local MCP's local Mail tools — no API keys.
+name: Email in Apple Mail on macOS (LMCP)
+description: Use when the user wants to read, search, summarize, draft or triage their Apple Mail / Gmail / Outlook / iCloud email in Apple Mail on macOS. Powered by LMCP's Mail tools, which are macOS-only.
 ---
 
-# Working with email via Local MCP
+# Working with email via LMCP
 
-Local MCP reads Apple Mail directly on the user's Mac (Gmail, Outlook, iCloud — any account in Mail.app). 100% local, no API keys.
+LMCP reads Apple Mail on the user's Mac (Gmail, Outlook, iCloud — any account in Mail.app). The tools execute on the device; the content you read is sent to the user's AI provider as part of the conversation. For a Microsoft 365 mailbox not added to Mail.app, use `m365_list_emails` / `m365_search_emails` / `m365_read_email` (macOS and Windows, require `connect_m365_account`).
 
 ## Core tools
 - `list_email_accounts` — see the user's accounts first if there are several.
@@ -18,4 +18,4 @@ Local MCP reads Apple Mail directly on the user's Mac (Gmail, Outlook, iCloud �
 - Lead with `list_email_accounts` when unsure which account.
 - Summarize threads; don't dump raw bodies.
 - For "reply to X", use `create_draft` with `reply_to_message_id` — the user sends it themselves.
-- If a tool returns a permission or install message, relay the one-click setup step to the user; it means the free Mac app isn't installed/granted yet.
+- If a tool returns a permission or install message, relay the one-click setup step to the user; it means the LMCP app isn't installed or a permission isn't granted yet.

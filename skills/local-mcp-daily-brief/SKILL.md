@@ -1,22 +1,25 @@
 ---
-name: Daily brief / morning catch-up (Local MCP)
-description: Use when the user asks "what's on my plate today", "catch me up", "morning brief", or wants a summary of their day across calendar, reminders and email. The single most common multi-step automation. Powered by Local MCP.
+name: Daily brief / morning catch-up (LMCP)
+description: Use when the user asks "what's on my plate today", "catch me up", "morning brief", or wants a summary of their day across calendar, reminders and email. The single most common multi-step automation. Powered by LMCP on macOS and Windows.
 ---
 
 # Daily brief / morning catch-up
 
-This is the #1 cross-domain workflow Local MCP users run: a quick "what do I need to know today"
-across calendar, reminders and email — all from local data, no API keys.
+This is the #1 cross-domain workflow LMCP users run: a quick "what do I need to know today"
+across calendar, reminders and email, read from the user's own apps.
 
-## The flow (do these, then synthesize one short summary)
-1. `get_datetime` — anchor to the user's current date/time.
+> Start here: `daily_brief` exists on **macOS and Windows** and bundles today's calendar, tasks
+> and email in one call. Use the steps below to fill gaps or go deeper.
+
+## The flow on macOS (do these, then synthesize one short summary)
+1. `get_datetime` — anchor to the user's current date/time (macOS and Windows).
 2. `list_calendar_events` for today (and optionally tomorrow) — meetings, with times and gaps.
 3. `list_reminders` — what's due/overdue.
-4. `list_emails` (pass `account=` on multi-account Macs) — recent/unread that may need attention;
-   skip newsletters and noise.
+4. `list_emails` (pass `account=` when Mail has several accounts) — recent/unread that may need
+   attention; skip newsletters and noise.
 
-> Shortcut: if a `daily_brief` tool is available, call it first — it bundles this. Use the steps
-> above to fill gaps or go deeper.
+Steps 2–4 use Apple Calendar, Reminders and Mail, so they exist only on macOS. On Windows, rely
+on `daily_brief`.
 
 ## Output
 Give a tight, scannable brief, not raw dumps:

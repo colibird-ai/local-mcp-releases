@@ -1,21 +1,23 @@
 ---
-name: Messages & team chat on Mac (Local MCP)
-description: Use when the user wants to read or search iMessage, Microsoft Teams, Slack, WhatsApp or Signal on their Mac — things cloud connectors can't reach. Powered by Local MCP, local-only.
+name: Messages & team chat (LMCP)
+description: Use when the user wants to read or search iMessage, WhatsApp or Signal (macOS) or Microsoft Teams and Slack (macOS and Windows) — things cloud connectors usually can't reach. Powered by LMCP.
 ---
 
-# Messages & team chat via Local MCP
+# Messages & team chat via LMCP
 
-Local MCP reads the user's local message stores on their Mac — iMessage (Messages.app), Microsoft Teams, Slack, WhatsApp, Signal — which cloud connectors physically cannot access.
+LMCP reads message stores on the user's computer. iMessage (Messages.app), WhatsApp and Signal are available
+**only on macOS**; Microsoft Teams and Slack work on **macOS and Windows**.
 
 ## Core tools
-- iMessage: `list_message_chats`, `read_messages`, `search_messages`.
-- Teams: `teams_list_chats` / `teams_list_channels` / `teams_read_chat_messages` / `teams_read_channel_messages`.
-- Slack: `slack_list_channels` / `slack_read_channel_messages` / `slack_search_messages`.
-- WhatsApp / Signal: `whatsapp_*` / `signal_*` readers.
-- Sending: `send_message` (iMessage) and `teams_send_message` preview before sending — never send silently.
+- iMessage (macOS): `list_message_chats`, `read_messages`, `search_messages`.
+- Teams (macOS and Windows): `teams_list_chats` / `teams_list_channels` / `teams_read_chat_messages` / `teams_read_channel_messages`.
+- Slack (macOS and Windows): `slack_list_workspaces` / `slack_list_channels` / `slack_read_channel_messages` / `slack_search_messages`.
+- WhatsApp (macOS): `whatsapp_list_chats` / `whatsapp_read_messages` / `whatsapp_search_messages`.
+- Signal (macOS): `signal_list_chats` / `signal_read_messages` / `signal_search_messages`.
+- Sending: `send_message` (iMessage, macOS) and `teams_send_message` (macOS and Windows; on Windows it goes through Microsoft Graph and needs `connect_m365_account`) return a preview first and send only with `confirm=true` — never send silently.
 
 ## Good practice
-- Reading is local and fast; summarize conversations rather than dumping every line.
+- Reading is fast; summarize conversations rather than dumping every line.
 - For "did X text me about Y", use `search_messages`.
-- Teams/Slack/WhatsApp/Signal require the respective app to be set up on the Mac; if a tool says it's not connected/synced, relay that setup step to the user.
+- Teams/Slack/WhatsApp/Signal require the respective app or account to be set up on the computer; if a tool says it's not connected/synced, relay that setup step to the user.
 - Any send is preview-first — show the recipient + text, confirm, then send.
