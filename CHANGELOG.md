@@ -1,3 +1,7 @@
+## v3.0.414 — 2026-09-28
+
+Easier setup: grant Full Disk Access, Screen Recording and Accessibility by dragging Local MCP into System Settings, with the window placed right where you need it. Automation is now asked only when an app is first used, and can be granted anytime from the menu bar. New Shortcuts tools let your AI list, view and run your Apple Shortcuts. Uninstalling now removes Local MCP's entries from System Settings. Plus many reliability fixes across Mail, Calendar, WhatsApp and permissions.
+
 ## v3.0.413 — 2026-09-21
 
 Excel: sheet_name now selects the sheet you asked for — writing to a sheet that does not exist no longer lands in the first one. Services you turn off in the tray now also release the macOS permission they were given. Reminders and Calendar permission checks are more reliable after an update.
