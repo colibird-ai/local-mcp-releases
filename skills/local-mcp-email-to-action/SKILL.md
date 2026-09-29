@@ -1,5 +1,5 @@
 ---
-name: Inbox to action — triage, reply & schedule on macOS (LMCP)
+name: local-mcp-email-to-action
 description: Use when the user wants to deal with their inbox — find what needs a response, draft replies, and turn emails into calendar events or reminders. Captures the common email→read→reply→schedule workflow on macOS (Apple Mail, Calendar, Reminders). Powered by LMCP.
 ---
 

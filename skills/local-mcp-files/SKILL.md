@@ -1,5 +1,5 @@
 ---
-name: Files, Office & Drive on macOS and Windows (LMCP)
+name: local-mcp-files
 description: Use when the user wants to find, read or create files and Office documents (Word/Excel/PowerPoint/PDF) on macOS or Windows, or browse OneDrive / Google Drive. Powered by LMCP; the tools execute on the device.
 ---
 

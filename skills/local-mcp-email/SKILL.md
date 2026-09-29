@@ -1,5 +1,5 @@
 ---
-name: Email in Apple Mail on macOS (LMCP)
+name: local-mcp-email
 description: Use when the user wants to read, search, summarize, draft or triage their Apple Mail / Gmail / Outlook / iCloud email in Apple Mail on macOS. Powered by LMCP's Mail tools, which are macOS-only.
 ---
 

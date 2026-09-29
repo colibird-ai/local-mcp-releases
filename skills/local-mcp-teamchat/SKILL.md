@@ -1,5 +1,5 @@
 ---
-name: Teams & Slack on macOS and Windows (LMCP)
+name: local-mcp-teamchat
 description: Use when the user wants to read or search Microsoft Teams or Slack on macOS or Windows, including channels and DMs that the Graph/Slack APIs make hard to reach. Powered by LMCP, reading the desktop apps' local data.
 ---
 

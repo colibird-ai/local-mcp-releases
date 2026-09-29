@@ -46,6 +46,12 @@ The recording shows a Mac workflow through Cloud Data Forwarding, not every plat
 2. Select your assistant and enable the compatible integrations you want to use.
 3. Grant required permissions or sign in where needed, then follow the assistant-specific setup guide.
 
+### Cursor plugin
+
+This repository is also a Cursor plugin. It adds the `local-mcp` MCP server, a rule that tells Cursor's agent when to use LMCP, and skills for email, calendar, messages, files and Office.
+
+LMCP must be installed first (step 1 above): the plugin starts the LMCP server on your computer and does not work without it.
+
 Supports **macOS 13+** and **Windows 10+ (64-bit)**. Linux, iOS and Android are not supported yet; join the waitlist on the **[download page](https://www.local-mcp.com/download?ref=github-releases)**.
 
 Choose one installation path:

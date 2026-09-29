@@ -1,5 +1,5 @@
 ---
-name: PDF → spreadsheet — extract data into Excel (LMCP)
+name: local-mcp-pdf-to-sheet
 description: Use when the user wants to pull data out of one or more PDFs (invoices, bank/credit-card statements, receipts, reports, tables) and put it into a spreadsheet. pdf_read is one of the most-used tools; this codifies the read-PDF → structure → write-Excel workflow. Powered by LMCP on macOS and Windows.
 ---
 
