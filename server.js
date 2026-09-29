@@ -7,7 +7,7 @@
 import { McpServer } from "@modelcontextprotocol/sdk/server/mcp.js";
 import { StdioServerTransport } from "@modelcontextprotocol/sdk/server/stdio.js";
 
-const server = new McpServer({ name: "local-mcp", version: "3.0.414" });
+const server = new McpServer({ name: "local-mcp", version: "3.0.415" });
 
 const TOOLS = [
   ["agent_ack", "Tells the senders that you actually read the messages agent_inbox gave you."],
@@ -137,6 +137,7 @@ const TOOLS = [
   ["recipe_import", "Installs a SKILL someone shared with you — pass the skill_token from their recipe_export (or a raw recipe m..."],
   ["recipe_install", "Installs a community SKILL by id (from recipe_discover) onto this Mac so recipe_run can use it."],
   ["recipe_list", "Lists the user's reusable SKILLS — saved recipes (an ordered sequence of LMCP tool calls with parameters),..."],
+  ["recipe_publish", "Submits one of YOUR saved recipes/skills to the community moderation queue for Dario's review — this does N..."],
   ["recipe_run", "Executes a recipe end to end: binds params, runs each step's tool in order via the registry, persists the r..."],
   ["recipe_runs", "Shows the history of past recipe runs and their results (recorded by recipe_run), so you can reuse, compare..."],
   ["recipe_save", "Saves a reusable SKILL — a named recipe (an ordered sequence of LMCP tool calls with parameters) — to this..."],
