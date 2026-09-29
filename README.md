@@ -40,6 +40,14 @@ For current tools, requirements and platform coverage, use the **[tool reference
 
 The recording shows a Mac workflow through Cloud Data Forwarding, not every platform or integration.
 
+**Watch the 1-minute overview** — what MCP is, how LMCP works, and a real run from email to Excel, Word and a reminder:
+
+<p align="center">
+  <a href="https://youtu.be/_Ssrmlm0VyA"><img src="https://img.youtube.com/vi/_Ssrmlm0VyA/maxresdefault.jpg" alt="LMCP overview video: the MCP server that connects Claude, ChatGPT and Cursor to your Mac and Windows apps" width="700"></a>
+</p>
+
+[Ver en español](https://youtu.be/x3tc6sbF8gI)
+
 ## Install and connect
 
 1. **[Download LMCP for your operating system](https://www.local-mcp.com/download?ref=github-releases).** Follow the installer and onboarding steps.
