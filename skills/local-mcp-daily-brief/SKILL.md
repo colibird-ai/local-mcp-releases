@@ -1,5 +1,5 @@
 ---
-name: Daily brief / morning catch-up (LMCP)
+name: local-mcp-daily-brief
 description: Use when the user asks "what's on my plate today", "catch me up", "morning brief", or wants a summary of their day across calendar, reminders and email. The single most common multi-step automation. Powered by LMCP on macOS and Windows.
 ---
 

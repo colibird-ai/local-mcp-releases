@@ -1,5 +1,5 @@
 ---
-name: Calendar & scheduling on macOS (LMCP)
+name: local-mcp-calendar
 description: Use when the user wants to check their calendar, find availability, or create/update/delete events in Apple Calendar on macOS. Powered by LMCP's Calendar tools, which are macOS-only.
 ---
 
