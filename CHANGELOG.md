@@ -1,3 +1,7 @@
+## v3.0.415 — 2026-09-29
+
+Reliability and accuracy fixes across Mail, Microsoft 365, Teams and Reminders; sharper permission and connection diagnostics; a tray stability fix; and you can now publish your saved recipes to the community.
+
 ## v3.0.414 — 2026-09-28
 
 Easier setup: grant Full Disk Access, Screen Recording and Accessibility by dragging Local MCP into System Settings, with the window placed right where you need it. Automation is now asked only when an app is first used, and can be granted anytime from the menu bar. New Shortcuts tools let your AI list, view and run your Apple Shortcuts. Uninstalling now removes Local MCP's entries from System Settings. Plus many reliability fixes across Mail, Calendar, WhatsApp and permissions.
