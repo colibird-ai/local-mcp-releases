@@ -1,3 +1,7 @@
+## v3.0.416 — 2026-09-30
+
+Reinstalling Local MCP now restarts the menu bar app if macOS had it stopped, and reports a clear error instead of success when it cannot start. Update reliability improvements.
+
 ## v3.0.415 — 2026-09-29
 
 Reliability and accuracy fixes across Mail, Microsoft 365, Teams and Reminders; sharper permission and connection diagnostics; a tray stability fix; and you can now publish your saved recipes to the community.
