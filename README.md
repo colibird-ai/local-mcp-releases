@@ -101,11 +101,11 @@ See **[Privacy](https://www.local-mcp.com/en/privacy)** and **[Security](SECURIT
 
 ## Releases and support
 
-See **[GitHub Releases](https://github.com/lanchuske/local-mcp-releases/releases)** for this repository's history and the **[download page](https://www.local-mcp.com/download?ref=github-releases)** for current installers. Mac and Windows can have different release versions; a GitHub tag alone is not a fleet-wide deployment signal.
+See **[GitHub Releases](https://github.com/colibird-ai/local-mcp-releases/releases)** for this repository's history and the **[download page](https://www.local-mcp.com/download?ref=github-releases)** for current installers. Mac and Windows can have different release versions; a GitHub tag alone is not a fleet-wide deployment signal.
 
-- Report a problem through LMCP's available feedback tools or **[open an issue](https://github.com/lanchuske/local-mcp-releases/issues)**. Include OS and app version, and remove sensitive content from logs.
+- Report a problem through LMCP's available feedback tools or **[open an issue](https://github.com/colibird-ai/local-mcp-releases/issues)**. Include OS and app version, and remove sensitive content from logs.
 - Request a feature through the available feedback tools or GitHub Issues.
 - Contact **[ctpo@colibird.co](mailto:ctpo@colibird.co)** for support; see [SECURITY.md](SECURITY.md) for vulnerabilities.
 - For current availability and commercial terms, see **[the website](https://www.local-mcp.com)** and [LICENSE](LICENSE). This README does not promise permanent pricing or future features.
 
-If LMCP helps you, **[star the repository](https://github.com/lanchuske/local-mcp-releases)** to help others discover it.
+If LMCP helps you, **[star the repository](https://github.com/colibird-ai/local-mcp-releases)** to help others discover it.
