@@ -1,3 +1,7 @@
+## v3.0.417 — 2026-10-03
+
+Setup now asks for every permission in one pass and closes System Settings when it is done. Replies keep the original message together with your text, and say so when part of a formatted message could not be carried over. Tools that write or delete describe exactly what they will do, OneDrive changes stay inside your OneDrive folders, updates report why they could not finish, and the connection used by desktop AI apps is more reliable.
+
 ## v3.0.416 — 2026-09-30
 
 Reinstalling Local MCP now restarts the menu bar app if macOS had it stopped, and reports a clear error instead of success when it cannot start. Update reliability improvements.
