@@ -1,3 +1,7 @@
+## v3.0.418 — 2026-10-05
+
+Mail: replies saved as drafts are confirmed in Drafts before the window closes, invalid recipients are refused before sending, and Microsoft 365 previews name sender, recipients and events. Add a personal Microsoft account (Outlook.com, Hotmail) alongside a work one; the app lists every connected account. iMessage, WhatsApp and Teams show contact and chat names and local times. Reminders: ambiguous list names are caught and Account/List picks one. Word and Excel never replace an existing file without asking. Many smaller fixes from full QA.
+
 ## v3.0.417 — 2026-10-03
 
 Setup now asks for every permission in one pass and closes System Settings when it is done. Replies keep the original message together with your text, and say so when part of a formatted message could not be carried over. Tools that write or delete describe exactly what they will do, OneDrive changes stay inside your OneDrive folders, updates report why they could not finish, and the connection used by desktop AI apps is more reliable.
