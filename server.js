@@ -7,7 +7,7 @@
 import { McpServer } from "@modelcontextprotocol/sdk/server/mcp.js";
 import { StdioServerTransport } from "@modelcontextprotocol/sdk/server/stdio.js";
 
-const server = new McpServer({ name: "local-mcp", version: "3.0.417" });
+const server = new McpServer({ name: "local-mcp", version: "3.0.418" });
 
 const TOOLS = [
   ["agent_ack", "Tells the senders that you actually read the messages agent_inbox gave you."],
@@ -274,6 +274,7 @@ const TOOLS = [
   ["explorer_list", "Lists files and folders in a directory."],
   ["explorer_search", "Searches for files by name recursively."],
   ["gdrive_set_scope", "Sets the active Google Drive root directory (when multiple accounts are synced)."],
+  ["list_m365_accounts", "List the Microsoft 365 accounts connected on this computer: email (upn), id, display name, which one is the..."],
   ["outlook_calendar_create_event", "Creates a calendar event in Microsoft Outlook."],
   ["outlook_calendar_delete_event", "Deletes a calendar event from Outlook by EntryID."],
   ["outlook_calendar_list_events", "Lists upcoming calendar events from Microsoft Outlook on Windows."],
@@ -294,9 +295,10 @@ const TOOLS = [
   ["outlook_search_emails", "Searches Outlook emails by keyword in subject or body."],
   ["outlook_send_email", "Sends an email via Microsoft Outlook on Windows."],
   ["run_qa", "Returns a QA test protocol listing every LMCP tool to test, with expected inputs and pass/fail criteria."],
+  ["set_default_m365_account", "Choose which connected Microsoft 365 account the Microsoft 365 and Teams tools use when no `account` is given."],
   ["submit_qa_report", "Submits a QA run report."],
   ["todo_list_lists", "Lists task folders/lists in Outlook Tasks, including nested subfolders."],
-  ["update_local_mcp", "Checks for and installs LMCP updates."],
+  ["update_local_mcp", "Checks whether an LMCP update is available for this computer and whether one is already downloaded."],
   ["update_self_diagnosis", "Returns the self-update health state: current version, latest available, pending update status."],
 ];
 
