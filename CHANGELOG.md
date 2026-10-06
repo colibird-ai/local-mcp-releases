@@ -1,3 +1,11 @@
+## v3.0.419 — 2026-10-06
+
+Fixes in 3.0.419:
+- The menu no longer freezes while LMCP checks an app permission. When an app doesn't answer, LMCP now says so instead of reporting the permission as refused.
+- OmniFocus Pro users who started on another OmniFocus edition are no longer told that Pro is required.
+- VS Code no longer refuses the excel_create tool.
+- The menu no longer offers to approve a Mac that is already approved for web AIs, and the action now reads «Allow web AIs to use this Mac».
+
 ## v3.0.418 — 2026-10-05
 
 Mail: replies saved as drafts are confirmed in Drafts before the window closes, invalid recipients are refused before sending, and Microsoft 365 previews name sender, recipients and events. Add a personal Microsoft account (Outlook.com, Hotmail) alongside a work one; the app lists every connected account. iMessage, WhatsApp and Teams show contact and chat names and local times. Reminders: ambiguous list names are caught and Account/List picks one. Word and Excel never replace an existing file without asking. Many smaller fixes from full QA.
