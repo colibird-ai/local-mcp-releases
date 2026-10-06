@@ -6,7 +6,7 @@
     "name": "LMCP"
   },
   "homepage": "https://www.local-mcp.com",
-  "repository": "https://github.com/lanchuske/local-mcp-releases",
+  "repository": "https://github.com/colibird-ai/local-mcp-releases",
   "license": "MIT",
   "logo": "assets/logo.png"
 }
