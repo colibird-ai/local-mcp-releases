@@ -1,3 +1,11 @@
+## v3.0.420 — 2026-10-08
+
+- Everything included. The installer now ships every helper (Slack, Teams, Telegram, WhatsApp, Signal, Zalo, video): nothing downloads at install or first use.
+- Multiple accounts. Connect more than one Telegram, WhatsApp or Microsoft 365 account, and pick which one each request uses.
+- Web AIs, more reliable. Reinstalling no longer leaves ChatGPT, Claude or Grok on an old connection, and approving a new web AI switches over instantly.
+- Safer terminal. Commands run in a macOS sandbox that keeps your keys, keychain, browser data and LMCP's own settings out of reach.
+- Fixes. One draft per request, previews name the account, cloud-only files download on demand, off-screen windows are found, the setup assistant can add a second Telegram account, and many smaller fixes.
+
 ## v3.0.419 — 2026-10-06
 
 Fixes in 3.0.419:
