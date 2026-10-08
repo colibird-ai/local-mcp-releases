@@ -89,7 +89,8 @@ Install the LMCP app first (see above); it runs the tools on your computer. Then
 | **Gemini CLI** | `gemini extensions install https://github.com/colibird-ai/local-mcp-releases` |
 | **Cursor** | `npx -y local-mcp@latest setup` (or install the Cursor plugin from this repository) |
 | **Windsurf, Zed, Claude Desktop** | `npx -y local-mcp@latest setup` configures the clients it detects |
-| **Cline, LM Studio, Continue, Goose, OpenCode and other MCP clients** | Add this server to the client's MCP settings: `npx -y local-mcp@latest` (command `npx`, arguments `-y local-mcp@latest`) |
+| **LM Studio** (0.3.17 and later) | [![Add to LM Studio](https://files.lmstudio.ai/deeplink/mcp-install-light.svg)](lmstudio://add_mcp?name=local-mcp&config=eyJjb21tYW5kIjoibnB4IiwiYXJncyI6WyIteSIsImxvY2FsLW1jcEBsYXRlc3QiXX0%3D) |
+| **Cline, Continue, Goose, OpenCode and other MCP clients** | Add this server to the client's MCP settings: `npx -y local-mcp@latest` (command `npx`, arguments `-y local-mcp@latest`) |
 
 Examples for clients that use their own config format:
 
