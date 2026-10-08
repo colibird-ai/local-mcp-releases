@@ -1,0 +1,12 @@
+{
+  "identifier": "colibird-local-mcp",
+  "name": "LMCP",
+  "version": "3.0.419",
+  "author": "LMCP",
+  "authorUrl": "https://www.local-mcp.com",
+  "category": "productivity",
+  "description": "Local tools that let your AI use Mail, Calendar, Contacts, Teams, Slack, WhatsApp (Mac), OneDrive, Google Drive, Notion, Outlook (Windows) and Office files on Mac and Windows. Runs on your computer.",
+  "homepage": "https://www.local-mcp.com",
+  "icon": "https://www.local-mcp.com/icon-400.png",
+  "tags": ["mcp", "mail", "calendar", "contacts", "teams", "slack", "whatsapp", "onedrive", "google-drive", "notion", "outlook", "office", "macos", "windows", "productivity"]
+}
