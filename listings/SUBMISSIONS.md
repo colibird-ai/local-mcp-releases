@@ -155,3 +155,11 @@ oauth:
 - Form: https://github.com/hesreallyhim/awesome-claude-code/issues/new?template=recommend-resource.yml
 - Resource: https://github.com/colibird-ai/local-mcp-claude-plugin ; description: `Plugin and marketplace that connect Claude Code to local Mail, Calendar, Contacts, Teams, Slack, WhatsApp (Mac), OneDrive, Google Drive, Notion, Outlook (Windows) and Office files on Mac and Windows.`
 - Low probability. Submit after #3 is merged and there are community adoption signals.
+
+## M. Awesome AI Plugins (HOL)
+
+- Community list `hashgraph-online/awesome-ai-plugins` (same organization as the Codex list in section D; about 495 stars, merges within hours, last commit the day it was checked). The maintainers invited the listing in local-mcp-releases#48. Rules (`CONTRIBUTING.md`): one README line, alphabetical order inside the section (`python3 scripts/check-alphabetical.py`), one sentence, search first. The catalog runs its own required source scan (80 or higher, no critical or high findings); scanner CI in our repository is optional.
+- Section: Community Plugins > Tools & Integrations, between LinkMCP and Logo Design Skill. Line:
+  `- [LMCP](https://github.com/colibird-ai/local-mcp-releases) - Local MCP server and plugins that let an assistant use Mail, Calendar, Contacts, Teams, Slack, WhatsApp (Mac), OneDrive, Google Drive, Notion, Outlook (Windows) and Office files on macOS and Windows.`
+- Done 2026-10-08: pull request https://github.com/hashgraph-online/awesome-ai-plugins/pull/666 from the `lanchuske` fork. No pricing words in the line (see the rules in `DESCRIPTIONS.md`).
+- After the merge the bot comments a claim link (as it did on awesome-codex-plugins#499): the GitHub account that maintains the repository can open it and continue with GitHub to claim the listing. That step is Dario's.
