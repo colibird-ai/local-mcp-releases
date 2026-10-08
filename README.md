@@ -76,6 +76,45 @@ Local desktop/CLI clients and web assistants connect differently. The installer 
 
 An endpoint alone is not a verified connection: complete authorization and check that tools are available in your client.
 
+## Install LMCP in your AI tool
+
+Install the LMCP app first (see above); it runs the tools on your computer. Then add LMCP to your assistant. After any of these, fully restart the tool: MCP tools load at startup.
+
+| Tool | Copy-paste |
+|---|---|
+| **Claude Code** | `claude plugin marketplace add colibird-ai/local-mcp-claude-plugin && claude plugin install local-mcp@local-mcp` (inside Claude Code: `/plugin marketplace add colibird-ai/local-mcp-claude-plugin` then `/plugin install local-mcp@local-mcp`) |
+| **Codex CLI** | `codex plugin marketplace add colibird-ai/local-mcp-releases && codex plugin add local-mcp@local-mcp` (or, MCP server only: `codex mcp add local-mcp -- npx -y local-mcp@latest`) |
+| **GitHub Copilot CLI** | `copilot plugin marketplace add colibird-ai/local-mcp-claude-plugin && copilot plugin install local-mcp@local-mcp` |
+| **VS Code (Copilot Chat)** | `code --add-mcp '{"name":"local-mcp","command":"npx","args":["-y","local-mcp@latest"]}'` |
+| **Gemini CLI** | `gemini extensions install https://github.com/colibird-ai/local-mcp-releases` |
+| **Cursor** | `npx -y local-mcp@latest setup` (or install the Cursor plugin from this repository) |
+| **Windsurf, Zed, Claude Desktop** | `npx -y local-mcp@latest setup` configures the clients it detects |
+| **Cline, LM Studio, Continue, Goose, OpenCode and other MCP clients** | Add this server to the client's MCP settings: `npx -y local-mcp@latest` (command `npx`, arguments `-y local-mcp@latest`) |
+
+Examples for clients that use their own config format:
+
+```bash
+# Goose
+goose session --with-extension "npx -y local-mcp@latest"
+```
+
+```jsonc
+// OpenCode: opencode.json
+{ "mcp": { "local-mcp": { "type": "local", "command": ["npx", "-y", "local-mcp@latest"] } } }
+```
+
+```jsonc
+// Zed: settings.json
+{ "context_servers": { "local-mcp": { "command": "npx", "args": ["-y", "local-mcp@latest"] } } }
+```
+
+```jsonc
+// Cline (cline_mcp_settings.json), LM Studio (mcp.json), Claude Desktop, Windsurf
+{ "mcpServers": { "local-mcp": { "command": "npx", "args": ["-y", "local-mcp@latest"] } } }
+```
+
+These paths need Node.js. Web assistants (ChatGPT, Claude.ai, Grok, Perplexity) connect differently; see above.
+
 ## How it works
 
 **Your assistant → MCP → available tools → relevant apps and accounts → context and actions.**
