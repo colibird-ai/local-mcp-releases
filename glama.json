@@ -4,7 +4,7 @@
     "lanchuske"
   ],
   "name": "Local MCP",
-  "description": "MCP server for macOS and Windows with 192+ local tools — connect Claude Desktop, Cursor, Windsurf, ChatGPT, Claude.ai and other MCP clients to Mail, Calendar, Contacts, Teams, OneDrive, Outlook, OmniFocus, Notes, Messages, Reminders, Finder, Word, Excel, PowerPoint, and PDF. Tools execute on your computer with no API keys to manage; availability varies by platform, and your AI provider still receives the content you ask for.",
+  "description": "MCP server for macOS and Windows with 201+ local tools — connect Claude Desktop, Cursor, Windsurf, ChatGPT, Claude.ai and other MCP clients to Mail, Calendar, Contacts, Teams, OneDrive, Outlook, OmniFocus, Notes, Messages, Reminders, Finder, Word, Excel, PowerPoint, and PDF. Tools execute on your computer with no API keys to manage; availability varies by platform, and your AI provider still receives the content you ask for.",
   "install": {
     "npm": "npx -y local-mcp@latest setup --ref=glama",
     "curl": "curl -fsSL \"https://www.local-mcp.com/install?ref=glama\" | bash",
@@ -242,6 +242,8 @@
     "servicenow_search_kb",
     "servicenow_update_incident",
     "set_default_m365_account",
+    "set_default_telegram_account",
+    "set_default_whatsapp_account",
     "shortcuts_list",
     "shortcuts_run",
     "shortcuts_view",
@@ -271,6 +273,7 @@
     "teams_send_message",
     "telegram_connect",
     "telegram_disconnect",
+    "telegram_list_accounts",
     "telegram_list_chats",
     "telegram_read_messages",
     "telegram_search_messages",
@@ -321,6 +324,7 @@
     "whatsapp_diagnose",
     "whatsapp_disconnect",
     "whatsapp_group_info",
+    "whatsapp_list_accounts",
     "whatsapp_list_chats",
     "whatsapp_list_groups",
     "whatsapp_read_messages",
