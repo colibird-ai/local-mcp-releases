@@ -7,7 +7,7 @@ Ready-to-paste payloads for the channels in `STATUS.md` that need a form, an acc
 1. Merge colibird-ai/local-mcp-claude-plugin#3 (Claude Code marketplace, Copilot CLI marketplace, accurate plugin metadata).
 2. Merge colibird-ai/local-mcp-releases#49 (Codex plugin, Gemini CLI extension, install section) and then the PR that carries this folder.
 3. Tag the plugin repository so reviewers can pin a ref:
-   `gh release create v1.1.0 -R colibird-ai/local-mcp-claude-plugin --target main --title "v1.1.0" --notes "Claude Code and Copilot CLI plugin for LMCP"` (use the version in `.claude-plugin/plugin.json` after #3 merges).
+   `gh release create v1.2.0 -R colibird-ai/local-mcp-claude-plugin --target main --title "v1.2.0" --notes "Claude Code and Copilot CLI plugin for LMCP"` (use the version in `.claude-plugin/plugin.json` after #3 merges).
 4. Run the forms and logins below. Items 1 to 3 unlock A, B, C, D and E.
 
 ## A. Claude plugin directory (Anthropic, official)
