@@ -50,4 +50,4 @@ Legend: Listed = visible in the directory. Open = submitted, waiting for the dir
 ## Merges and logins that unlock the most
 
 1. Merged 2026-10-08: colibird-ai/local-mcp-claude-plugin#3 and colibird-ai/local-mcp-releases#49, #50 and #51. Claude Code, Copilot CLI, Codex, Gemini CLI and Cursor installs now work from `main`.
-3. Claude directory portal (choose the owning organization). Done on 2026-10-09: Cursor application, GitHub MCP Registry email, LobeHub, skills.sh, mcp.so and mcpservers.org; Continue Hub is gone.
+2. Claude directory portal (choose the owning organization). Done on 2026-10-09: Cursor application, GitHub MCP Registry email, LobeHub, skills.sh, mcp.so and mcpservers.org; Continue Hub is gone.
