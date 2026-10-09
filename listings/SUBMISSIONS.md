@@ -165,3 +165,29 @@ oauth:
   `- [LMCP](https://github.com/colibird-ai/local-mcp-releases) - Local MCP server and plugins that let an assistant use Mail, Calendar, Contacts, Teams, Slack, WhatsApp (Mac), OneDrive, Google Drive, Notion, Outlook (Windows) and Office files on macOS and Windows.`
 - Done 2026-10-08: pull request https://github.com/hashgraph-online/awesome-ai-plugins/pull/666 from the `lanchuske` fork. No pricing words in the line (see the rules in `DESCRIPTIONS.md`).
 - After the merge the bot comments a claim link (as it did on awesome-codex-plugins#499): the GitHub account that maintains the repository can open it and continue with GitHub to claim the listing. That step is Dario's.
+
+## N. Corrections to existing listings (audit of 2026-10-09, #61)
+
+Each of these needs a login, a form or an email of Dario's. The text is the short or the long description of `DESCRIPTIONS.md`; no tool count, no version, no pricing word.
+
+Short description, used below as **[short]**:
+`Local tools that let your AI use Mail, Calendar, Contacts, Teams, Slack, WhatsApp (Mac), OneDrive, Google Drive, Notion, Outlook (Windows) and Office files on Mac and Windows. Runs on your computer.`
+
+- **MCP Market** (`https://mcpmarket.com/server/pilot-2`, edit form at `/manage`). Today: titled «Pilot», «191+ tools», repository `lanchuske`.
+  - Repository: `https://github.com/colibird-ai/local-mcp-releases`
+  - Description: the long description of `DESCRIPTIONS.md` (the three paragraphs under "Long description").
+  - Title «LMCP» and slug `local-mcp` cannot be changed in the form: already requested from support@mcpmarket.com on 2026-10-09; reply on that thread if there is no answer in a week.
+- **PulseMCP** (`https://www.pulsemcp.com/servers/lanchuske-local-mcp`). Today: «82 system-level tools», «Native macOS app», `lanchuske`, registry name `io.github.lanchuske/local-mcp`, which no longer exists. Submissions and edits are paused, so by email to their support:
+  - Subject: `Correction for the "Local MCP" listing (lanchuske-local-mcp)`
+  - Body: `Hello, I maintain LMCP (Local MCP). Its PulseMCP listing is out of date. Could you update it? Name: LMCP. Repository: https://github.com/colibird-ai/local-mcp-releases (it moved from lanchuske/local-mcp-releases). Official MCP Registry name: com.local-mcp/local-mcp (io.github.lanchuske/local-mcp no longer exists). Platforms: macOS 13+ and Windows 10+. Description: [short] Thank you.`
+- **Glama, server page** (`https://glama.ai/mcp/servers/colibird-ai/local-mcp-releases`). The description field is already correct; the generated summary still starts «Pilot MCP is a local macOS server… 80+ apps». Ask in their Discord or support:
+  - `The AI-generated summary of colibird-ai/local-mcp-releases still describes an old product name ("Pilot MCP") and "a local macOS server". The product is LMCP and supports macOS and Windows; the description field and glama.json are current. Could you regenerate the summary?`
+- **mcp.so** (`https://mcp.so/servers/local-mcp-releases`, account of the paid submission). Today: «188+ tools», repository `lanchuske`.
+  - Repository: `https://github.com/colibird-ai/local-mcp-releases` · Description: **[short]**
+- **Cline marketplace issue** (`https://github.com/cline/mcp-marketplace/issues/1909`, our own issue, account `lanchuske`). Today: title «180 local Mac tools», body «macOS only today», «100% local», «free».
+  - Title: `[Server Submission]: LMCP — local tools for Mac and Windows apps`
+  - In the body: repository `https://github.com/colibird-ai/local-mcp-releases`; replace the description with **[short]**; remove «macOS only today», «100% local» and «free»; keep the install line `npx -y local-mcp@latest`.
+- **awesome-mac PR** (`https://github.com/jaywcjlove/awesome-mac/pull/2442`, branch on the `lanchuske` fork). Today: «230+ tools» and the Freeware icon.
+  - Line text: `Local MCP - Local tools that let your AI use Mail, Calendar, Contacts, Teams, Slack, WhatsApp, OneDrive, Notion and Office files on your Mac.` Remove the Freeware icon (pricing rule).
+
+Opened on 2026-10-09 and waiting for a merge, nothing to do: punkpeye/awesome-mcp-servers#15186 (updated), pathintegral-institute/mcpm.sh#436, TensorBlock/awesome-mcp-servers#3411.

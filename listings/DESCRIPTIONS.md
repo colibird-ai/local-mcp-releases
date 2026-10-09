@@ -79,4 +79,5 @@ The Claude Code, Codex, Copilot CLI and Gemini CLI lines work after the pull req
 
 ## Known copy to correct on the next publish
 
-- Cline issue cline/mcp-marketplace#1909 and the PR awesome-mcp-servers#15186 still say "188+ tools"; the published count is 192+.
+- Cline issue cline/mcp-marketplace#1909 still says "180 local Mac tools", "macOS only today" and "free": replace its title and body with the copy of section N of `SUBMISSIONS.md` (no tool count: rule above). The PR awesome-mcp-servers#15186 was corrected on 2026-10-09.
+- The floor that the release pipeline writes is 201+ (`tool-count-floor.v1.json`). `local-mcp-claude-plugin` still says 192+ in its README and repository description, and the npm description still ends in "free": both are written by `lmcp-npm` (#61).
