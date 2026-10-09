@@ -148,6 +148,7 @@ oauth:
   `npx -y @lobehub/market-cli login`, `npx -y @lobehub/market-cli github connect`, then from the folder with `lhm.plugin.json` (see `listings/lobehub/lhm.plugin.json`):
   `npx -y @lobehub/market-cli plugin publish https://github.com/colibird-ai/local-mcp-releases --dir "$(pwd)/listings/lobehub"`
 - Earlier requests lobehub/lobehub#13354 and #16263 are closed; the CLI is the supported path.
+- Published 2026-10-09. Later versions: bump `version` in `lhm.plugin.json` and run `npx -y @lobehub/market-cli plugin update --dir "$(pwd)/listings/lobehub"`; `plugin publish` refuses an existing listing.
 
 ## L. Awesome Claude Code
 
