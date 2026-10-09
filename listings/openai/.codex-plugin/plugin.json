@@ -1,0 +1,29 @@
+{
+  "author": {
+    "name": "Dario Matias Lanchuske"
+  },
+  "description": "LMCP turns requests that span several of your apps into one conversation. It runs on your own Mac or Windows PC and connects ChatGPT to your mail, calendar, contacts, reminders, notes, files, PDFs, and Word, Excel and PowerPoint.\n\nWhat it adds beyond a single connector:\n• Multi-step workflows across apps — read a customer's email, build the Excel quote, write the Word brief and set the reminder, in one request.\n• Recipes — save a workflow and run it again later with one prompt.\n• Daily brief — today's meetings, unread mail and pending reminders in one summary.\n• Local-first — tools run on your computer with the accounts already set up in your apps (no API keys), and your mailbox and files are not copied to the cloud.\n• You stay in control — you approve the connection on your computer, admins can disable tools by policy, and sending or deleting requires explicit confirmation.",
+  "interface": {
+    "capabilities": [],
+    "category": "Productivity",
+    "defaultPrompt": [
+      "Give me my daily brief: today's meetings, unread email and pending reminders",
+      "Find the vendor invoices forwarded to my inbox and build an Excel sheet in my Documents folder",
+      "Read the latest email from a customer, write the talking points in a Word doc and remind me tomorrow"
+    ],
+    "developerName": "Dario Matias Lanchuske",
+    "displayName": "LMCP",
+    "longDescription": "LMCP turns requests that span several of your apps into one conversation. It runs on your own Mac or Windows PC and connects ChatGPT to your mail, calendar, contacts, reminders, notes, files, PDFs, and Word, Excel and PowerPoint.\n\nWhat it adds beyond a single connector:\n• Multi-step workflows across apps — read a customer's email, build the Excel quote, write the Word brief and set the reminder, in one request.\n• Recipes — save a workflow and run it again later with one prompt.\n• Daily brief — today's meetings, unread mail and pending reminders in one summary.\n• Local-first — tools run on your computer with the accounts already set up in your apps (no API keys), and your mailbox and files are not copied to the cloud.\n• You stay in control — you approve the connection on your computer, admins can disable tools by policy, and sending or deleting requires explicit confirmation.",
+    "privacyPolicyURL": "https://www.local-mcp.com/en/privacy",
+    "shortDescription": "Email, calendar & Office tasks",
+    "supportURL": "https://www.local-mcp.com/help",
+    "termsOfServiceURL": "https://www.local-mcp.com/en/tos",
+    "websiteURL": "https://www.local-mcp.com",
+    "logo": "./assets/logo.png",
+    "composerIcon": "./assets/logo.png"
+  },
+  "name": "app-6a2f301f84bc8191bf18c5c73b1594a4",
+  "version": "1.2.0",
+  "skills": "./skills/",
+  "mcpServers": "./.mcp.json"
+}
