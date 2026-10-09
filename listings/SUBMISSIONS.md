@@ -63,13 +63,13 @@ Ready-to-paste payloads for the channels in `STATUS.md` that need a form, an acc
 ## F. GitHub MCP Registry (this is what VS Code's `@mcp` gallery shows)
 
 - Checked on 2026-10-08: the registry (api.mcp.github.com, 394 curated servers) does not contain LMCP. VS Code reads this registry, so LMCP is absent from the gallery.
-- LMCP is already published in the official MCP Registry (`com.local-mcp/local-mcp`, 3.0.419 active), which is the prerequisite. GitHub then adds servers by email.
+- LMCP is already published in the official MCP Registry (`com.local-mcp/local-mcp`, active), which is the prerequisite. GitHub then adds servers by email.
 - Email to: partnerships@github.com
 - Subject: `Request to include com.local-mcp/local-mcp in the GitHub MCP Registry`
 - Body:
   > Hello, we are the LMCP team (Colibird). Please include our MCP server in the GitHub MCP Registry so it appears in VS Code's MCP gallery.
   >
-  > Official MCP Registry name: com.local-mcp/local-mcp (version 3.0.419 is active).
+  > Official MCP Registry name: com.local-mcp/local-mcp.
   > Repository: https://github.com/colibird-ai/local-mcp-releases
   > Website: https://www.local-mcp.com
   >
@@ -85,7 +85,7 @@ Ready-to-paste payloads for the channels in `STATUS.md` that need a form, an acc
 
 ```yaml
 name: LMCP
-version: 3.0.419
+version: latest
 schema: v1
 mcpServers:
   - name: LMCP
@@ -148,6 +148,7 @@ oauth:
   `npx -y @lobehub/market-cli login`, `npx -y @lobehub/market-cli github connect`, then from the folder with `lhm.plugin.json` (see `listings/lobehub/lhm.plugin.json`):
   `npx -y @lobehub/market-cli plugin publish https://github.com/colibird-ai/local-mcp-releases --dir "$(pwd)/listings/lobehub"`
 - Earlier requests lobehub/lobehub#13354 and #16263 are closed; the CLI is the supported path.
+- Published 2026-10-09. Later versions: bump `version` in `lhm.plugin.json` and run `npx -y @lobehub/market-cli plugin update --dir "$(pwd)/listings/lobehub"`; `plugin publish` refuses an existing listing.
 
 ## L. Awesome Claude Code
 
