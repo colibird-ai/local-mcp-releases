@@ -7,7 +7,7 @@ One set of copy for every directory. Copy from here; do not rewrite per channel.
 - Describe only what the published version does. No claims that exist only in a later version.
 - No version numbers and no tool counts in copy that a third party hosts: nobody updates it after a release, so it goes stale (on 2026-10-09 the live listings said 82, 188+, 191+, 244, 255 and 290 tools). Use `@latest` in install lines. The release pipeline keeps the numbers that it writes itself (README, repository description).
 - Nothing about pricing, plans, free tiers or charging. Do not write "free", "paid", "trial" or "premium".
-- Do not add platform qualifiers such as "(Mac)" or "(Windows)" to an app name: every app named below works on Mac and Windows (WhatsApp and Outlook included; on the Mac, Outlook mail and calendar go through the Microsoft 365 tools). A limit of one platform belongs in its guide, not in listing copy.
+- Do not add platform qualifiers such as "(Mac)" or "(Windows)" to an app name. WhatsApp and Outlook work on Mac and Windows (on the Mac, Outlook mail and calendar go through the Microsoft 365 tools). A limit of one platform (the Notion tools, for example, are in the Mac catalog only) belongs in its guide, not in listing copy.
 - Say that the tools run on the user's computer, that the LMCP app is installed first, and that web AIs connect through an optional relay (Cloud Data Forwarding, off by default).
 - Do not call it "100% local", "private" or "GDPR compliant". The AI provider still receives the content the user asks it to process.
 
@@ -75,9 +75,9 @@ Directory keywords (lowercase, hyphenated): `mcp`, `mail`, `calendar`, `contacts
 | VS Code | `code --add-mcp '{"name":"local-mcp","command":"npx","args":["-y","local-mcp@latest"]}'` |
 | Goose | `goose session --with-extension "npx -y local-mcp@latest"` |
 
-The Claude Code, Codex, Copilot CLI and Gemini CLI lines work after the pull requests colibird-ai/local-mcp-claude-plugin#3 and colibird-ai/local-mcp-releases#49 are merged.
+The Claude Code, Codex, Copilot CLI and Gemini CLI lines work from `main` (colibird-ai/local-mcp-claude-plugin#3 and colibird-ai/local-mcp-releases#49, merged 2026-10-08).
 
 ## Known copy to correct on the next publish
 
-- Cline issue cline/mcp-marketplace#1909 still says "180 local Mac tools", "macOS only today" and "free": replace its title and body with the copy of section N of `SUBMISSIONS.md` (no tool count: rule above). The PR awesome-mcp-servers#15186 was corrected on 2026-10-09.
-- The floor that the release pipeline writes is 201+ (`tool-count-floor.v1.json`). `local-mcp-claude-plugin` still says 192+ in its README and repository description, and the npm description still ends in "free": both are written by `lmcp-npm` (#61).
+- npm: the description of the published `local-mcp` version still ends in "free" and its `os` still lists `linux`. Both are corrected in `lmcp-npm` and reach npm with the next version; npm cannot change a published one.
+- Smithery and MCP Market: see their rows in `STATUS.md`.

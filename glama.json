@@ -4,7 +4,7 @@
     "lanchuske"
   ],
   "name": "Local MCP",
-  "description": "MCP server for macOS and Windows with 201+ local tools — connect Claude Desktop, Cursor, Windsurf, ChatGPT, Claude.ai and other MCP clients to Mail, Calendar, Contacts, Teams, OneDrive, Outlook, OmniFocus, Notes, Messages, Reminders, Finder, Word, Excel, PowerPoint, and PDF. Tools execute on your computer with no API keys to manage; availability varies by platform, and your AI provider still receives the content you ask for.",
+  "description": "MCP server for macOS and Windows with 201+ local tools — connect Claude Desktop, Cursor, Windsurf, ChatGPT, Claude.ai and other MCP clients to Mail, Calendar, Contacts, Teams, OneDrive, Outlook, Notion, OmniFocus, Notes, Messages, Reminders, Finder, Word, Excel, PowerPoint, and PDF. Tools execute on your computer with no API keys to manage; availability varies by platform, and your AI provider still receives the content you ask for.",
   "install": {
     "npm": "npx -y local-mcp@latest setup --ref=glama",
     "curl": "curl -fsSL \"https://www.local-mcp.com/install?ref=glama\" | bash",

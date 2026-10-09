@@ -1,6 +1,6 @@
 {
   "name": "local-mcp",
-  "description": "Give Cursor's agent your own Mac or Windows apps through LMCP, a local MCP server: Mail, Calendar, Contacts, Messages, Teams, Slack, Word, Excel, PowerPoint, PDFs, OneDrive and local files. Tools run on your computer, with no tokens or API keys to manage.",
+  "description": "Give Cursor's agent your own Mac or Windows apps through LMCP, a local MCP server: Mail, Calendar, Contacts, Messages, Teams, Slack, Notion, Word, Excel, PowerPoint, PDFs, OneDrive and local files. Tools run on your computer, with no tokens or API keys to manage.",
   "version": "1.0.0",
   "author": {
     "name": "LMCP"
