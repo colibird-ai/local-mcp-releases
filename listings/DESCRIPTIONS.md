@@ -7,7 +7,7 @@ One set of copy for every directory. Copy from here; do not rewrite per channel.
 - Describe only what the published version does. No claims that exist only in a later version.
 - No version numbers and no tool counts in copy that a third party hosts: nobody updates it after a release, so it goes stale (on 2026-10-09 the live listings said 82, 188+, 191+, 244, 255 and 290 tools). Use `@latest` in install lines. The release pipeline keeps the numbers that it writes itself (README, repository description).
 - Nothing about pricing, plans, free tiers or charging. Do not write "free", "paid", "trial" or "premium".
-- Be exact about platforms: WhatsApp tools are Mac only, Outlook tools are Windows only. Everything else named below works on both unless a guide says otherwise.
+- Do not add platform qualifiers such as "(Mac)" or "(Windows)" to an app name: every app named below works on Mac and Windows (WhatsApp and Outlook included; on the Mac, Outlook mail and calendar go through the Microsoft 365 tools). A limit of one platform belongs in its guide, not in listing copy.
 - Say that the tools run on the user's computer, that the LMCP app is installed first, and that web AIs connect through an optional relay (Cloud Data Forwarding, off by default).
 - Do not call it "100% local", "private" or "GDPR compliant". The AI provider still receives the content the user asks it to process.
 
@@ -41,17 +41,17 @@ One set of copy for every directory. Copy from here; do not rewrite per channel.
 
 ## Short description (use everywhere a single line is allowed)
 
-> Local tools that let your AI use Mail, Calendar, Contacts, Teams, Slack, WhatsApp (Mac), OneDrive, Google Drive, Notion, Outlook (Windows) and Office files on Mac and Windows. Runs on your computer.
+> Local tools that let your AI use Mail, Calendar, Contacts, Teams, Slack, WhatsApp, OneDrive, Google Drive, Notion, Outlook and Office files on Mac and Windows. Runs on your computer.
 
 Where a directory limits length, cut at a sentence boundary in this order and keep the first part:
 
 1. Full text above (about 200 characters).
-2. `Local tools for Mail, Calendar, Contacts, Teams, Slack, WhatsApp (Mac), OneDrive, Google Drive, Notion, Outlook (Windows) and Office files. Mac and Windows.` (about 150 characters)
+2. `Local tools for Mail, Calendar, Contacts, Teams, Slack, WhatsApp, OneDrive, Google Drive, Notion, Outlook and Office files. Mac and Windows.` (about 150 characters)
 3. `Your Mac and Windows apps, as tools for your AI. Runs on your computer.` (about 70 characters)
 
 ## Long description (use everywhere a paragraph is allowed)
 
-> LMCP is a local MCP server that lets your AI assistant work with the apps and files on your own computer. It provides tools for Mail, Calendar, Contacts, Microsoft Teams, Slack, WhatsApp (Mac), OneDrive, Google Drive, Notion, Outlook (Windows), Word, Excel, PowerPoint and PDF files, local files and more. Availability varies by platform.
+> LMCP is a local MCP server that lets your AI assistant work with the apps and files on your own computer. It provides tools for Mail, Calendar, Contacts, Microsoft Teams, Slack, WhatsApp, OneDrive, Google Drive, Notion, Outlook, Word, Excel, PowerPoint and PDF files, local files and more. Availability varies by platform.
 >
 > The tools run on your computer, on macOS 13+ and Windows 10+ (64-bit). Install the LMCP app first; your AI client then starts the server with `npx -y local-mcp@latest`, or through a plugin or extension for Claude Code, Codex, GitHub Copilot CLI, Gemini CLI and Cursor. Web assistants such as ChatGPT, Claude.ai, Grok and Perplexity connect through an optional relay at https://www.local-mcp.com/mcp using OAuth; it requires Cloud Data Forwarding, which is off by default.
 >

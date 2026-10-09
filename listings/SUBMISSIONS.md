@@ -53,13 +53,13 @@ Ready-to-paste payloads for the channels in `STATUS.md` that need a form, an acc
 - **Submitted.** Status and history are in `STATUS.md`; the package source and the build steps are in `listings/openai/README.md`. The requirements below are kept for reference.
 - Official OpenAI plugin directory (shared by ChatGPT and Codex): portal https://platform.openai.com/plugins (guide: https://developers.openai.com/plugins/deploy/submission). Needs an organization owner or "Apps Management Write", a verified developer identity, a ZIP of the plugin, domain verification for the hosted MCP server, five positive and three negative test cases, reviewer credentials and a demo video. Manifest limits: `displayName` 30 characters or fewer (`LMCP`), `shortDescription` 30 characters or fewer (use the tagline), `longDescription` 4000 characters or fewer (long description from `DESCRIPTIONS.md`), plus `websiteURL`, `supportURL`, `privacyPolicyURL`, `termsOfServiceURL`. Needs Dario and a deliberate decision: the hosted connector only answers tools after the LMCP app is installed.
 - Community list `hashgraph-online/awesome-codex-plugins`: one README line, after #49 merges and after the HOL scanner score is 80/130 or higher with no high findings (`pipx install "plugin-scanner==3.32.0"` then `plugin-scanner scan . --format text`). It also asks for `SECURITY.md` (present), `LICENSE`, `README.md` and a dependency lockfile (not present). Line:
-  `- [LMCP](https://github.com/colibird-ai/local-mcp-releases) - Local tools that let Codex use Mail, Calendar, Contacts, Teams, Slack, WhatsApp (Mac), OneDrive, Google Drive, Notion, Outlook (Windows) and Office files on Mac and Windows.`
+  `- [LMCP](https://github.com/colibird-ai/local-mcp-releases) - Local tools that let Codex use Mail, Calendar, Contacts, Teams, Slack, WhatsApp, OneDrive, Google Drive, Notion, Outlook and Office files on Mac and Windows.`
 
 ## E. Gemini CLI
 
 - Extensions gallery (https://geminicli.com/extensions) is a daily crawl; there is no form. Requirements: public GitHub repository, topic `gemini-cli-extension` (already set), `gemini-extension.json` at the repository root (arrives with #49). Check after one to two days: `curl -s https://geminicli.com/extensions.json | grep -c local-mcp`. If it is missing after four daily crawls, open a "GeminiCLI.com Feedback" issue in google-gemini/gemini-cli (precedents: issues 28861 and 29623).
 - Community list `Piebald-AI/awesome-gemini-cli-extensions`: README line at the bottom of the matching section, after #49 merges:
-  `- [**LMCP**](https://github.com/colibird-ai/local-mcp-releases) - Local tools that let Gemini CLI use Mail, Calendar, Contacts, Teams, Slack, WhatsApp (Mac), OneDrive, Google Drive, Notion, Outlook (Windows) and Office files on Mac and Windows.`
+  `- [**LMCP**](https://github.com/colibird-ai/local-mcp-releases) - Local tools that let Gemini CLI use Mail, Calendar, Contacts, Teams, Slack, WhatsApp, OneDrive, Google Drive, Notion, Outlook and Office files on Mac and Windows.`
 
 ## F. GitHub MCP Registry (this is what VS Code's `@mcp` gallery shows)
 
@@ -74,7 +74,7 @@ Ready-to-paste payloads for the channels in `STATUS.md` that need a form, an acc
   > Repository: https://github.com/colibird-ai/local-mcp-releases
   > Website: https://www.local-mcp.com
   >
-  > Local tools that let your AI use Mail, Calendar, Contacts, Teams, Slack, WhatsApp (Mac), OneDrive, Google Drive, Notion, Outlook (Windows) and Office files on Mac and Windows. Runs on your computer.
+  > Local tools that let your AI use Mail, Calendar, Contacts, Teams, Slack, WhatsApp, OneDrive, Google Drive, Notion, Outlook and Office files on Mac and Windows. Runs on your computer.
   >
   > Contact: ctpo@colibird.co
 - Needs: Dario sends it (or approves sending it from his mailbox).
@@ -125,7 +125,7 @@ meta:
     - windows
 about:
   title: LMCP
-  description: Local tools that let your AI use Mail, Calendar, Contacts, Teams, Slack, WhatsApp (Mac), OneDrive, Google Drive, Notion, Outlook (Windows) and Office files on Mac and Windows. Requires the LMCP app and Cloud Data Forwarding.
+  description: Local tools that let your AI use Mail, Calendar, Contacts, Teams, Slack, WhatsApp, OneDrive, Google Drive, Notion, Outlook and Office files on Mac and Windows. Requires the LMCP app and Cloud Data Forwarding.
   icon: https://www.local-mcp.com/icon-400.png
 remote:
   transport_type: streamable-http
@@ -155,14 +155,14 @@ oauth:
 
 - `hesreallyhim/awesome-claude-code` accepts recommendations only through its web issue form, written by a human, and says closed-source projects and anything that needs a sign-up are hard to review. Rules: at least 14 days of history with continued commits, or 100 stars; one resource at a time; one-line description, no emojis, no sales language.
 - Form: https://github.com/hesreallyhim/awesome-claude-code/issues/new?template=recommend-resource.yml
-- Resource: https://github.com/colibird-ai/local-mcp-claude-plugin ; description: `Plugin and marketplace that connect Claude Code to local Mail, Calendar, Contacts, Teams, Slack, WhatsApp (Mac), OneDrive, Google Drive, Notion, Outlook (Windows) and Office files on Mac and Windows.`
+- Resource: https://github.com/colibird-ai/local-mcp-claude-plugin ; description: `Plugin and marketplace that connect Claude Code to local Mail, Calendar, Contacts, Teams, Slack, WhatsApp, OneDrive, Google Drive, Notion, Outlook and Office files on Mac and Windows.`
 - Low probability. Submit after #3 is merged and there are community adoption signals.
 
 ## M. Awesome AI Plugins (HOL)
 
 - Community list `hashgraph-online/awesome-ai-plugins` (same organization as the Codex list in section D; about 495 stars, merges within hours, last commit the day it was checked). The maintainers invited the listing in local-mcp-releases#48. Rules (`CONTRIBUTING.md`): one README line, alphabetical order inside the section (`python3 scripts/check-alphabetical.py`), one sentence, search first. The catalog runs its own required source scan (80 or higher, no critical or high findings); scanner CI in our repository is optional.
 - Section: Community Plugins > Tools & Integrations, between LinkMCP and Logo Design Skill. Line:
-  `- [LMCP](https://github.com/colibird-ai/local-mcp-releases) - Local MCP server and plugins that let an assistant use Mail, Calendar, Contacts, Teams, Slack, WhatsApp (Mac), OneDrive, Google Drive, Notion, Outlook (Windows) and Office files on macOS and Windows.`
+  `- [LMCP](https://github.com/colibird-ai/local-mcp-releases) - Local MCP server and plugins that let an assistant use Mail, Calendar, Contacts, Teams, Slack, WhatsApp, OneDrive, Google Drive, Notion, Outlook and Office files on macOS and Windows.`
 - Done 2026-10-08: pull request https://github.com/hashgraph-online/awesome-ai-plugins/pull/666 from the `lanchuske` fork. No pricing words in the line (see the rules in `DESCRIPTIONS.md`).
 - After the merge the bot comments a claim link (as it did on awesome-codex-plugins#499): the GitHub account that maintains the repository can open it and continue with GitHub to claim the listing. That step is Dario's.
 
