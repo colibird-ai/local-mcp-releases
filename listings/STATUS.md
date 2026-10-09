@@ -1,6 +1,6 @@
 # Listing status
 
-Single tracking table for every AI-tool directory. Last checked: 2026-10-08 (REST and web checks only; updated after the merges). Copy lives in `DESCRIPTIONS.md`; ready-to-paste payloads in `SUBMISSIONS.md` (letters in the last column refer to its sections). Update this table whenever a status changes.
+Single tracking table for every AI-tool directory. Last checked: 2026-10-09 (web checks and browser submissions). Copy lives in `DESCRIPTIONS.md`; ready-to-paste payloads in `SUBMISSIONS.md` (letters in the last column refer to its sections). Update this table whenever a status changes.
 
 Legend: Listed = visible in the directory. Open = submitted, waiting for the directory. Prepared = payload ready, waiting for the step named. Needs Dario = a form, login, email or merge only he can do. Not applicable = the channel has no listing we can use.
 
@@ -8,13 +8,13 @@ Legend: Listed = visible in the directory. Open = submitted, waiting for the dir
 |---|---|---|---|---|
 | MCP Registry (official) | `mcp-publisher` from `lmcp-npm` CI | Listed. 3.0.419 is active and latest (older versions deprecated). | https://registry.modelcontextprotocol.io/v0.1/servers?search=com.local-mcp | Fix merged 2026-10-08 in colibird-ai/lmcp-npm#70: `npm/server.json` no longer ends in "Free." and guard 149 refuses pricing words. The live registry entry still shows the old text until Dario publishes 3.0.420 together with npm. This registry also covers Zed and Goose (below). |
 | Glama | Crawl plus `glama.json` | Listed | https://glama.ai/mcp/servers/colibird-ai/local-mcp-releases | None. |
-| Smithery | CLI publish from CI | Listed | https://smithery.ai/server/@lanchuske/local-mcp | None. |
+| Smithery | CLI publish from CI | Listed (checked 2026-10-09: «Mac or Windows», 244 tools) | https://smithery.ai/servers/colibird-ai/local-mcp | None. |
 | TensorBlock MCP index | Pull request | Listed (PR merged 2026-09-27) | https://tensorblock.co/mcp/servers/github-lanchuske-local-mcp-releases-bf301799 | None. |
 | mcpm.sh registry | Pull request | Listed (PR merged 2026-10-06) | https://github.com/pathintegral-institute/mcpm.sh/pull/410 | None. |
 | Cline MCP Marketplace | Issue form in cline/mcp-marketplace | Open since 2026-08-27, no maintainer reply. Nudge posted 2026-10-08 with Windows support, install line and org URL. | https://github.com/cline/mcp-marketplace/issues/1909 | Check in one week; do not open another issue (two earlier ones were closed as duplicates). |
 | awesome-mcp-servers (punkpeye) | Pull request | Open. Mergeable, 2 bot comments: `missing-glama` (badge is already in the entry) and `duplicate` (false positive: the PR edits the existing entry). Last activity 2026-09-27. | https://github.com/punkpeye/awesome-mcp-servers/pull/15186 | Wait. Do not open another PR: ten earlier ones were closed. Update the "188+ tools" text to 192+ only if a maintainer asks for changes. |
 | awesome-mac (jaywcjlove) | Pull request | Open since 2026-07-28 | https://github.com/jaywcjlove/awesome-mac/pull/2442 | Wait. |
-| mcp.so | Issue in chatmcp/mcpso | Open since 2026-05-08 (stale) | https://github.com/chatmcp/mcpso/issues/1341 | Submit the form on mcp.so with the new copy (needs Dario's login); the issue text is outdated. |
+| mcp.so | Paid web submission (about 2026-09-19) | Listed as «Local MCP (LMCP)», macOS and Windows, 188+ tools. The site search does not find it by «local-mcp». | https://mcp.so/servers/local-mcp-releases | None. The stale issue chatmcp/mcpso#1341 can be closed. |
 | GitHub Copilot: github/copilot-plugins | Pull request (marketplace.json plus README) | Open, opened 2026-10-08 from the `lanchuske` fork | https://github.com/github/copilot-plugins/pull/104 | Wait. Third-party pull requests there (#87 to #103) have not been merged; GitHub curates this list. |
 | GitHub Copilot: github/awesome-copilot | Issue form `external-plugin.yml`, immutable ref plus SHA | Open. Issue filed 2026-10-08 from `lanchuske` with ref `v1.2.0` and SHA `ead06ba003992ecb0acc4d3c6a019bc091c584d3`. | https://github.com/github/awesome-copilot/issues/4635 | Wait for the intake bot; comment `/rerun-intake` if a check fails. |
 | Claude plugin directory (Anthropic) | Web form | Prepared. #3 is merged and the plugin repository is tagged `v1.2.0`. | https://clau.de/plugin-directory-submission | Needs Dario: submit the form. `SUBMISSIONS.md` section A. |
@@ -35,12 +35,20 @@ Legend: Listed = visible in the directory. Open = submitted, waiting for the dir
 | `npx skills` registry (skills.sh) | No submission; listed from install telemetry. Repo skills verified: `npx skills add colibird-ai/local-mcp-releases --list` shows 8 skills. | Installable, not yet ranked | https://www.skills.sh | Needs Dario (one command): `npx skills add colibird-ai/local-mcp-releases` once, so the first install is counted. |
 | Docker MCP Catalog (docker/mcp-registry) | Pull request; local entries are containers, remote entries need test credentials | Not a fit for a local entry. Remote entry prepared but held. | https://github.com/docker/mcp-registry | Needs Dario: decide on the remote entry (section I). |
 | Raycast | Raycast Store takes TypeScript extensions in raycast/extensions, not MCP servers | Not applicable | https://github.com/raycast/extensions | None. |
-| mcpservers.org (wong2 list) | Web form, no login | Prepared | https://mcpservers.org/submit | Needs Dario or anyone on the team: submit (section J). |
+| mcpservers.org (wong2 list) | Web form, no login | Open. Submitted 2026-10-09 (free plan, contact ctpo@colibird.co, copy from `DESCRIPTIONS.md`). Review within two weeks. | https://mcpservers.org/submit | Wait. |
 | LobeHub MCP Marketplace | `lhm` CLI with browser login | Prepared (`listings/lobehub/lhm.plugin.json`) | https://lobehub.com/mcp | Needs Dario: login and GitHub connect (section K). |
 | Awesome Claude Code | Human-written issue form only | Prepared, low probability | https://github.com/hesreallyhim/awesome-claude-code | Needs Dario (section L); #3 is merged, wait for community adoption signals. |
+| Cursor Directory (cursor.directory) | Open Plugins scan of this repository | Listed as «Local MCP» (a 2026-10-09 re-submission answered «already exists»). | https://cursor.directory/plugins/local-mcp | None. |
+| MCP Market | Claimed listing, edit form at /manage | Listed but titled «Pilot» (the form has no title field). Rename and slug `local-mcp` requested from support@mcpmarket.com on 2026-10-09. | https://mcpmarket.com/server/pilot-2 | Wait for support. |
+| PulseMCP | Web form | Listed but stale: «Native macOS app exposing 82 system-level tools», repository `lanchuske/local-mcp-releases`. Submissions and edits paused. | https://www.pulsemcp.com/servers/lanchuske-local-mcp | Request the update when https://www.pulsemcp.com/submit reopens. |
+| Future Tools | Web form | Open. Submitted 2026-10-09 (contact hello@local-mcp.com, pricing field «Freemium»). | https://www.futuretools.io/submit-a-tool | Wait for review. |
+| Toolradar | Vendor account (company Colibird, verified with ctpo@colibird.co) | Open. Submitted 2026-10-09; review within ten business days. The form required a pricing field («Free»). | https://toolradar.com/dashboard | After approval, check the copy against `DESCRIPTIONS.md` (WhatsApp is Mac only). |
+| AlternativeTo | Account lanchuske@gmail.com, «Suggest new application» | Open. Submitted 2026-10-09 with Composio as alternative. Homebrew cask left empty: the site only accepts casks from the official Homebrew catalog. | https://alternativeto.net/ | After approval, add more alternatives and check the copy. |
+| Changelog News | Account `lanchuske` (hello@local-mcp.com); only newsletter subscribers can submit | Open. Submitted 2026-10-09. Changelog rejects commercial products, so it had to go before the freemium launch on 2026-11-01. | https://changelog.com/news/submit | None; they email only if they publish. |
+| Futurepedia | Paid listing only (the free submit page returns 404) | Not listed | https://www.futurepedia.io | Needs Dario: decide on the paid listing. |
 
 ## Merges and logins that unlock the most
 
 1. Merged 2026-10-08: colibird-ai/local-mcp-claude-plugin#3 and colibird-ai/local-mcp-releases#49, #50 and #51. Claude Code, Copilot CLI, Codex, Gemini CLI and Cursor installs now work from `main`.
 2. Publish 3.0.420 (npm and MCP Registry, Dario) so the registry description loses "Free.".
-3. Cursor form, Claude plugin directory form, GitHub MCP Registry email, Continue Hub block, LobeHub login, mcp.so and mcpservers.org forms.
+3. Cursor form, Claude plugin directory form, GitHub MCP Registry email, Continue Hub block and LobeHub login (mcp.so and mcpservers.org done on 2026-10-09).
