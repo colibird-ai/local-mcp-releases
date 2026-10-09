@@ -1,7 +1,7 @@
 {
   "name": "local-mcp",
   "version": "1.0.0",
-  "description": "Gemini CLI access to your own Mac or Windows apps through LMCP, a local MCP server: Mail, Calendar, Contacts, Messages, Teams, Slack, WhatsApp, OneDrive, Office documents and local files. Install the LMCP app first.",
+  "description": "Gemini CLI access to your own Mac or Windows apps through LMCP, a local MCP server: Mail, Calendar, Contacts, Messages, Teams, Slack, WhatsApp, OneDrive, Notion, Office documents and local files. Install the LMCP app first.",
   "mcpServers": {
     "local-mcp": {
       "command": "npx",
