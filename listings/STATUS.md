@@ -6,7 +6,7 @@ Legend: Listed = visible in the directory. Open = submitted, waiting for the dir
 
 | Channel | Method | Status | Link | Next step |
 |---|---|---|---|---|
-| MCP Registry (official) | `mcp-publisher` from `lmcp-npm` CI | Listed. 3.0.419 is active and latest (older versions deprecated). | https://registry.modelcontextprotocol.io/v0.1/servers?search=com.local-mcp | Fix merged 2026-10-08 in colibird-ai/lmcp-npm#70: `npm/server.json` no longer ends in "Free." and guard 149 refuses pricing words. The live registry entry still shows the old text until Dario publishes 3.0.420 together with npm. This registry also covers Zed and Goose (below). |
+| MCP Registry (official) | `mcp-publisher` from `lmcp-npm` CI | Listed. 3.0.420 is active and latest (checked 2026-10-09); its description no longer says "Free.". | https://registry.modelcontextprotocol.io/v0.1/servers?search=com.local-mcp | None. This registry also covers Zed and Goose (below). |
 | Glama | Crawl plus `glama.json` | Listed | https://glama.ai/mcp/servers/colibird-ai/local-mcp-releases | None. |
 | Smithery | CLI publish from CI | Listed (checked 2026-10-09: «Mac or Windows», 244 tools) | https://smithery.ai/servers/colibird-ai/local-mcp | None. |
 | TensorBlock MCP index | Pull request | Listed (PR merged 2026-09-27) | https://tensorblock.co/mcp/servers/github-lanchuske-local-mcp-releases-bf301799 | None. |
@@ -50,5 +50,4 @@ Legend: Listed = visible in the directory. Open = submitted, waiting for the dir
 ## Merges and logins that unlock the most
 
 1. Merged 2026-10-08: colibird-ai/local-mcp-claude-plugin#3 and colibird-ai/local-mcp-releases#49, #50 and #51. Claude Code, Copilot CLI, Codex, Gemini CLI and Cursor installs now work from `main`.
-2. Publish 3.0.420 (npm and MCP Registry, Dario) so the registry description loses "Free.".
 3. Claude directory portal (choose the owning organization). Done on 2026-10-09: Cursor application, GitHub MCP Registry email, LobeHub, skills.sh, mcp.so and mcpservers.org; Continue Hub is gone.

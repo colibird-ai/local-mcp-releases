@@ -79,5 +79,4 @@ The Claude Code, Codex, Copilot CLI and Gemini CLI lines work after the pull req
 
 ## Known copy to correct on the next publish
 
-- MCP Registry description for 3.0.419 ends with "Free.". On the next publish from `lmcp-npm`, replace it with option 3 of the short description (the registry description is limited to 100 characters).
 - Cline issue cline/mcp-marketplace#1909 and the PR awesome-mcp-servers#15186 still say "188+ tools"; the published count is 192+.
