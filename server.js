@@ -7,7 +7,7 @@
 import { McpServer } from "@modelcontextprotocol/sdk/server/mcp.js";
 import { StdioServerTransport } from "@modelcontextprotocol/sdk/server/stdio.js";
 
-const server = new McpServer({ name: "local-mcp", version: "3.0.420" });
+const server = new McpServer({ name: "local-mcp", version: "3.0.421" });
 
 const TOOLS = [
   ["agent_ack", "Tells the senders that you actually read the messages agent_inbox gave you."],
@@ -285,7 +285,14 @@ const TOOLS = [
   ["echo", "Echoes the input text back."],
   ["explorer_list", "Lists files and folders in a directory."],
   ["explorer_search", "Searches for files by name recursively."],
+  ["gdrive_disconnect", "Turns one Google Drive folder off in Local MCP: its tools stop reading it until the user turns it back on i..."],
   ["gdrive_set_scope", "Sets the active Google Drive root directory (when multiple accounts are synced)."],
+  ["m365_create_draft", "Create an email DRAFT in the Drafts folder of your Microsoft 365 account, for you to review and send yourself."],
+  ["obsidian_list_vaults", "Lists the Obsidian vaults on this computer, from Obsidian's own list of vaults: id, name, folder path and n..."],
+  ["obsidian_read_note", "Reads one note of an Obsidian vault: its text, frontmatter, tags, outgoing [[wikilinks]] (each with the not..."],
+  ["obsidian_search_notes", "Searches the notes of an Obsidian vault by text (`query`: note title and text, case-insensitive), by tag (`..."],
+  ["obsidian_write_note", "Writes a Markdown note in an Obsidian vault."],
+  ["onedrive_disconnect", "Turns one OneDrive folder off in Local MCP: its tools stop reading it until the user turns it back on in Lo..."],
   ["outlook_calendar_create_event", "Creates a calendar event in Microsoft Outlook."],
   ["outlook_calendar_delete_event", "Deletes a calendar event from Outlook by EntryID."],
   ["outlook_calendar_list_events", "Lists upcoming calendar events from Microsoft Outlook on Windows."],
@@ -305,8 +312,24 @@ const TOOLS = [
   ["outlook_save_attachment", "Saves attachments from an Outlook email to a folder."],
   ["outlook_search_emails", "Searches Outlook emails by keyword in subject or body."],
   ["outlook_send_email", "Sends an email via Microsoft Outlook on Windows."],
+  ["proton_connect", "Reports whether Proton Mail Bridge answers on this computer and which Proton Mail accounts are connected to..."],
+  ["proton_disconnect", "Disconnects one Proton Mail account from Local MCP: removes the Bridge password stored for it from Windows..."],
+  ["proton_list_emails", "Lists the newest messages of one folder of a Proton Mail account, newest first: id, sender, recipients, sub..."],
+  ["proton_read_email", "Reads one Proton Mail message by the id proton_list_emails or proton_search_emails returned: sender, recipi..."],
+  ["proton_search_emails", "Searches one folder of a Proton Mail account for `query` in the messages' headers and text, newest first."],
+  ["proton_send_email", "Sends a plain-text message from a connected Proton Mail address, through Proton Mail Bridge on this computer."],
   ["run_qa", "Returns a QA test protocol listing every LMCP tool to test, with expected inputs and pass/fail criteria."],
+  ["slack_disconnect", "Turns Slack off in Local MCP: its tools stop reading it until the user turns it back on in Local MCP's Sett..."],
+  ["submit_diagnostics", "Runs the same health check as run_diagnostics and sends the result to the LMCP team so they can look into a..."],
   ["submit_qa_report", "Submits a QA run report."],
+  ["thunderbird_connect", "Reports, per mail account of the Thunderbird profile on this computer, whether Local MCP can send from it:..."],
+  ["thunderbird_disconnect", "Stops Local MCP from sending from one Thunderbird account: removes the password Local MCP stored for it fro..."],
+  ["thunderbird_list_accounts", "Lists the mail accounts of the Thunderbird profile on this computer: id, name, address, type (imap, pop3 or..."],
+  ["thunderbird_list_emails", "Lists the newest messages of one Thunderbird folder, newest first: id, sender, recipients, subject, date, s..."],
+  ["thunderbird_read_email", "Reads one Thunderbird message by the id thunderbird_list_emails or thunderbird_search_emails returned: send..."],
+  ["thunderbird_search_contacts", "Searches Thunderbird's address books on this computer (the personal one and the collected addresses) for `q..."],
+  ["thunderbird_search_emails", "Searches one Thunderbird account's messages for `query` in subject, sender, recipients and body text, ignor..."],
+  ["thunderbird_send_email", "Sends a plain-text message from one Thunderbird account, through that account's own outgoing mail server, w..."],
   ["todo_list_lists", "Lists task folders/lists in Outlook Tasks, including nested subfolders."],
   ["update_local_mcp", "Checks whether an LMCP update is available for this computer and whether one is already downloaded."],
   ["update_self_diagnosis", "Returns the self-update health state: current version, latest available, pending update status."],
