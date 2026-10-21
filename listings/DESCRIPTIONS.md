@@ -79,5 +79,6 @@ The Claude Code, Codex, Copilot CLI and Gemini CLI lines work from `main` (colib
 
 ## Known copy to correct on the next publish
 
-- npm: the description of the published `local-mcp` version still ends in "free" and its `os` still lists `linux`. Both are corrected in `lmcp-npm` and reach npm with the next version; npm cannot change a published one.
-- Smithery and MCP Market: see their rows in `STATUS.md`.
+- The About of `colibird-ai/local-mcp-releases` was corrected on 2026-10-21 (no count). The lmcp-npm release writes it again: its template is being aligned (Refs #61).
+- The `tagline` of `https://www.local-mcp.com/.well-known/mcp/server-card.json` carries a count ("201+ tools"): `lmcp-admin` removes it.
+- Third-party listings that still carry counts or "100% local", "GDPR", "free" or "(Mac)"/"(Windows)": see `STATUS.md`. Do not paste a count or a version into any of them.
