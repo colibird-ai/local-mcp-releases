@@ -79,6 +79,6 @@ The Claude Code, Codex, Copilot CLI and Gemini CLI lines work from `main` (colib
 
 ## Known copy to correct on the next publish
 
-- The About of `colibird-ai/local-mcp-releases` still carries a tool count ("201+"). It is copied by mcpservers.org, MCP Harbor, Glama and freemcp. Replace it with the short description above plus "no API keys". The release pipeline of `lmcp-npm` writes it; until then edit it by hand.
+- The About of `colibird-ai/local-mcp-releases` was corrected on 2026-10-21 (no count). The lmcp-npm release writes it again: its template is being aligned (Refs #61).
 - The `tagline` of `https://www.local-mcp.com/.well-known/mcp/server-card.json` carries a count ("201+ tools"): `lmcp-admin` removes it.
 - Third-party listings that still carry counts or "100% local", "GDPR", "free" or "(Mac)"/"(Windows)": see `STATUS.md`. Do not paste a count or a version into any of them.
