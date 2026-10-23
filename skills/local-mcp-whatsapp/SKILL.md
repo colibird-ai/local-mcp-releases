@@ -21,4 +21,4 @@ in a local store on the computer, so search works across all chats.
 - Every send is preview-first: show the chat and the text, confirm, then send.
 - If a tool says WhatsApp isn't linked, offer `whatsapp_connect` instead of retrying.
 
-Guide: https://www.local-mcp.com/guides/claude-whatsapp-mac
+Guides: https://www.local-mcp.com/guides/claude-whatsapp-mac · https://www.local-mcp.com/guides/claude-whatsapp-windows

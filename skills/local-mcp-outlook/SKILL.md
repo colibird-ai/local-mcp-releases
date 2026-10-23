@@ -9,12 +9,12 @@ LMCP works with the Outlook account already set up on the user's computer: no Az
 registration, no Graph API token and no tenant admin approval.
 
 ## Core tools
-- **Windows** (the Outlook desktop app): `outlook_list_emails`, `outlook_search_emails`, `outlook_read_email`,
+- **Outlook app tools**: `outlook_list_emails`, `outlook_search_emails`, `outlook_read_email`,
   `outlook_reply_email`, `outlook_reply_all`, `outlook_forward_email`, `outlook_send_email`, `outlook_move_email`,
   `outlook_flag_email`, `outlook_save_attachment`; calendar `outlook_calendar_list_events`,
   `outlook_calendar_create_event`; contacts `outlook_contacts_search`, `outlook_get_contact`.
-- **macOS**: the Mac email tools (`list_emails`, `search_emails`, `read_email`, `reply_email`) read the accounts
-  configured on the Mac. `outlook_diagnose` shows which Outlook accounts LMCP can see and what is missing.
+- **Mail tools**: `list_emails`, `search_emails`, `read_email` and `reply_email` read the mail accounts configured
+  on the computer. `outlook_diagnose` shows which Outlook accounts LMCP can see and what is missing.
 - A Microsoft 365 account can also be connected with `connect_m365_account` for the `m365_*` tools.
 
 ## Good practice
