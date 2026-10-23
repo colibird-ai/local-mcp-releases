@@ -1,3 +1,13 @@
+## v3.0.424 — 2026-10-23
+
+LMCP 3.0.423 for Mac
+
+- The app is now simply «LMCP» (/Applications/LMCP.app); your settings and permissions move over on their own.
+- Fewer interruptions: LMCP only asks before sending, permanently deleting or publishing. Everything you can undo just happens.
+- Setup is quicker: LMCP configures the AI apps it finds and tells you which ones, and every step can be done later.
+- The menu bar no longer shows a stale «Needs permission» for apps you already allowed.
+- Clearer answers when a request asks for too much or too little, plus fixes across Mail, Calendar and UI tools.
+
 ## v3.0.421 — 2026-10-13
 
 - Everything included. The installer now ships every helper (Slack, Teams, Telegram, WhatsApp, Signal, Zalo, video): nothing downloads at install or first use.
