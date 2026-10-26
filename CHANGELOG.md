@@ -1,3 +1,7 @@
+## v3.0.425 — 2026-10-26
+
+Connecting apps is clearer: app rows show the right state right after you connect, and setup forms clear their hints as you type. ChatGPT and Grok connect with one approval on your Mac. Many smaller fixes to the menu bar app, onboarding and tools.
+
 ## v3.0.424 — 2026-10-23
 
 LMCP 3.0.423 for Mac
