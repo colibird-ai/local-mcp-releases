@@ -7,7 +7,7 @@
 import { McpServer } from "@modelcontextprotocol/sdk/server/mcp.js";
 import { StdioServerTransport } from "@modelcontextprotocol/sdk/server/stdio.js";
 
-const server = new McpServer({ name: "local-mcp", version: "3.0.424" });
+const server = new McpServer({ name: "local-mcp", version: "3.0.425" });
 
 const TOOLS = [
   ["agent_ack", "Tells the senders that this session read the messages agent_inbox returned, one message_id each, and takes..."],
@@ -165,7 +165,7 @@ const TOOLS = [
   ["recipe_get", "Returns the full manifest of a recipe by name."],
   ["recipe_import", "Installs a SKILL someone shared with you — pass the skill_token from their recipe_export (or a raw recipe m..."],
   ["recipe_install", "Installs a community SKILL by id (from recipe_discover) onto this Mac so recipe_run can use it."],
-  ["recipe_list", "Lists the user's reusable SKILLS — saved recipes (an ordered sequence of LMCP tool calls with parameters),..."],
+  ["recipe_list", "Lists the user's reusable SKILLS — saved recipes (an ordered sequence of LMCP tool calls with parameters) —..."],
   ["recipe_rename", "Renames one of the user's saved recipes."],
   ["recipe_run", "Executes a recipe end to end: binds params, runs each step's tool in order via the registry, persists the r..."],
   ["recipe_runs", "Shows the history of past recipe runs and their results (recorded by recipe_run), so you can reuse, compare..."],
@@ -291,12 +291,14 @@ const TOOLS = [
   ["whatsapp_create_group", "Creates a WhatsApp group and adds the given participants."],
   ["whatsapp_diagnose", "WhatsApp health check (wacli doctor): which account is linked (number), last sync time, store lock, message..."],
   ["whatsapp_disconnect", "Unlink WhatsApp from Local MCP — logs out the linked device on this Mac (via wacli)."],
+  ["whatsapp_forward_message", "Forwards one WhatsApp message (text, document, image, video or voice note/audio) to another chat, marked as..."],
   ["whatsapp_group_info", "Fetches a WhatsApp group's live info + participant list."],
   ["whatsapp_list_accounts", "List the WhatsApp accounts linked to Local MCP on this Mac: each one's id (wa1, wa2, …), the label the user..."],
   ["whatsapp_list_chats", "Lists WhatsApp conversations with last message preview."],
   ["whatsapp_list_groups", "Lists the WhatsApp groups this account is in (from the local store — run whatsapp_sync first if a just-crea..."],
   ["whatsapp_read_messages", "Reads messages from a specific WhatsApp chat."],
   ["whatsapp_read_poll", "Reads WhatsApp poll results."],
+  ["whatsapp_save_media", "Saves the media of one WhatsApp message (a document such as PDF, DOCX or XLSX, an image, a video, or a voic..."],
   ["whatsapp_search_contacts", "Searches your WhatsApp contacts (synced metadata) by name or number — use it to resolve a person to their J..."],
   ["whatsapp_search_messages", "Offline full-text search across all WhatsApp chats."],
   ["whatsapp_send_file", "Sends a file attachment to a WhatsApp chat."],
