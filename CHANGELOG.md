@@ -1,3 +1,7 @@
+## v3.0.426 — 2026-10-27
+
+Mail no longer reports an inbox as failed when Mail shows it empty; it reads it from Mail's index or says so clearly. Sending with Messages works even when Messages is closed. If the LMCP menu-bar app isn't running when your AI needs it, LMCP opens it in the background. Terminal commands can no longer control other apps through AppleScript. A few tools have clearer names; the old names keep working. Every tool that changes something is now marked that way for your AI client, so it can ask before acting.
+
 ## v3.0.425 — 2026-10-26
 
 Connecting apps is clearer: app rows show the right state right after you connect, and setup forms clear their hints as you type. ChatGPT and Grok connect with one approval on your Mac. Many smaller fixes to the menu bar app, onboarding and tools.
