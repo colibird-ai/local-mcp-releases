@@ -7,7 +7,7 @@
 import { McpServer } from "@modelcontextprotocol/sdk/server/mcp.js";
 import { StdioServerTransport } from "@modelcontextprotocol/sdk/server/stdio.js";
 
-const server = new McpServer({ name: "local-mcp", version: "3.0.425" });
+const server = new McpServer({ name: "local-mcp", version: "3.0.426" });
 
 const TOOLS = [
   ["agent_ack", "Tells the senders that this session read the messages agent_inbox returned, one message_id each, and takes..."],
@@ -117,9 +117,13 @@ const TOOLS = [
   ["move_email", "Moves an email to another mailbox (nested target folders are found by name)."],
   ["music_add_to_playlist", "Adds library tracks to a playlist of the Music app, in the order given."],
   ["music_list_playlists", "Lists the playlists of the Music app: id, name, kind (playlist or folder) and total length."],
+  ["music_next_track", "Skips to the next track in the Music app."],
   ["music_now_playing", "Reports what the Music app is playing: the player state (playing, paused or stopped), the current track (id..."],
-  ["music_playback", "Controls playback in the Music app."],
+  ["music_pause", "Pauses playback in the Music app."],
+  ["music_play", "Starts playback in the Music app: resumes, or with `track_id` plays that library track, or with `playlist`..."],
+  ["music_previous_track", "Goes back to the previous track in the Music app."],
   ["music_search_library", "Searches the tracks of the user's Music library."],
+  ["music_set_volume", "Sets the Music app's volume, 0 to 100."],
   ["nordvpn_diagnose", "Run a diagnostic check on NordVPN: installation, login state, connection status, kill switch, and supported..."],
   ["nordvpn_servers", "Get recommended NordVPN servers by country or specialty."],
   ["nordvpn_status", "Check NordVPN connection status: connected/disconnected, auto-connect, snooze, and last known location."],
@@ -150,12 +154,12 @@ const TOOLS = [
   ["permissions_status", "Reports the TCC permission state (screen recording, accessibility, microphone) this app needs to capture th..."],
   ["ppt_create", "Creates a PowerPoint presentation (.pptx) at `path` from an array of slides, each {title, bullets:[…]}."],
   ["ppt_read", "Reads slide text content from a PowerPoint presentation (.pptx file)."],
-  ["proton_connect", "Reports whether Proton Mail Bridge answers on this computer and which Proton Mail accounts are connected to..."],
   ["proton_disconnect", "Disconnects one Proton Mail account from Local MCP: removes the Bridge password stored for it from the macO..."],
   ["proton_list_emails", "Lists the newest messages of one folder of a Proton Mail account, newest first: id, sender, recipients, sub..."],
   ["proton_read_email", "Reads one Proton Mail message by the id proton_list_emails or proton_search_emails returned: sender, recipi..."],
   ["proton_search_emails", "Searches one folder of a Proton Mail account for `query` in the messages' headers and text, newest first."],
   ["proton_send_email", "Sends a plain-text message from a connected Proton Mail address, through Proton Mail Bridge on this computer."],
+  ["proton_status", "Reports whether Proton Mail Bridge answers on this computer and which Proton Mail accounts are connected to..."],
   ["read_email", "Use this when the user wants the full content of an email that lives in the Mac's Apple Mail (message ID fr..."],
   ["read_messages", "Reads messages from an iMessage conversation by chat ID or contact name."],
   ["read_note", "Reads the full content of a note by name or ID."],
@@ -240,8 +244,10 @@ const TOOLS = [
   ["telegram_read_messages", "Reads recent messages of one Telegram chat, newest first."],
   ["telegram_search_messages", "Searches your Telegram messages by text, across all chats or (with chat_id from telegram_list_chats) inside..."],
   ["telegram_send_message", "Sends a Telegram message from your own account to one chat."],
-  ["telegram_watch_messages", "Asks Local MCP to tell this session when new messages arrive in chosen Telegram chats, so you do not have t..."],
-  ["thunderbird_connect", "Reports, per mail account of the Thunderbird profile on this computer, whether Local MCP can send from it:..."],
+  ["telegram_unwatch_chats", "Stops the Telegram message notices telegram_watch_chats set up for this session: for `account`, or for ever..."],
+  ["telegram_watch_chats", "Asks LMCP to tell this session when new messages arrive in chosen Telegram chats, so you do not have to kee..."],
+  ["telegram_watch_status", "Says which Telegram chats this session is watching (telegram_watch_chats) and, per account, when they were..."],
+  ["thunderbird_accounts_status", "Reports, per mail account of the Thunderbird profile on this computer, whether Local MCP can send from it:..."],
   ["thunderbird_disconnect", "Stops Local MCP from sending from one Thunderbird account: removes the password Local MCP stored for it fro..."],
   ["thunderbird_list_accounts", "Lists the mail accounts of the Thunderbird profile on this computer: id, name, address, type (imap, pop3 or..."],
   ["thunderbird_list_emails", "Lists the newest messages of one Thunderbird folder, newest first: id, sender, recipients, subject, date, s..."],
@@ -305,7 +311,6 @@ const TOOLS = [
   ["whatsapp_send_message", "Sends a text message to a WhatsApp chat."],
   ["whatsapp_send_poll", "Sends a poll to a WhatsApp chat/group — everyone in the chat sees it."],
   ["whatsapp_sync", "Starts WhatsApp pulling the latest messages, groups and contacts into the local store and returns right awa..."],
-  ["whatsapp_watch_messages", "WhatsApp message notices are not available in this version: set answers delivery \"unsupported\" with error_k..."],
   ["window_focus", "Brings a window (by window_id from list_windows) to the front and activates its app."],
   ["window_set_frame", "Pins a window (by window_id) to fixed bounds {x,y,w,h} in global points, so every take is framed identicall..."],
   ["word_append", "Appends text to the end of an existing Word (.docx) document at `path`, preserving the document's existing..."],
