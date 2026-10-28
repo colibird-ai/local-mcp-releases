@@ -7,7 +7,7 @@
 import { McpServer } from "@modelcontextprotocol/sdk/server/mcp.js";
 import { StdioServerTransport } from "@modelcontextprotocol/sdk/server/stdio.js";
 
-const server = new McpServer({ name: "local-mcp", version: "3.0.426" });
+const server = new McpServer({ name: "local-mcp", version: "3.0.427" });
 
 const TOOLS = [
   ["agent_ack", "Tells the senders that this session read the messages agent_inbox returned, one message_id each, and takes..."],
