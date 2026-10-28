@@ -1,3 +1,7 @@
+## v3.0.427 — 2026-10-28
+
+Mail: list_emails confirma una bandeja vacía con el conteo de Mail, read_email lee encabezados del índice, la respuesta encuentra el original de iCloud. Terminal: osascript dentro de bash -c/sh -c/eval se rechaza antes de correr; la sandbox no permite captura, Accesibilidad ni teclado. La bandeja ya no queda en una versión vieja. Calendar marca sus escrituras como acciones con efecto externo.
+
 ## v3.0.426 — 2026-10-27
 
 Mail no longer reports an inbox as failed when Mail shows it empty; it reads it from Mail's index or says so clearly. Sending with Messages works even when Messages is closed. If the LMCP menu-bar app isn't running when your AI needs it, LMCP opens it in the background. Terminal commands can no longer control other apps through AppleScript. A few tools have clearer names; the old names keep working. Every tool that changes something is now marked that way for your AI client, so it can ask before acting.
