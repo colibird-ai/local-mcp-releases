@@ -1,3 +1,7 @@
+## v3.0.429 — 2026-10-29
+
+Setup is quieter: LMCP configures your AI apps and tells you what it did, with no permission requests up front. macOS asks for each permission the first time a tool needs it. Mail is more reliable with real accounts and large mailboxes. Client configs with comments (JSONC) are read correctly. Clearer error messages, a calmer menu bar after a fresh install, and the installer now repairs a broken install. The relay status is the same everywhere it is shown.
+
 ## v3.0.427 — 2026-10-28
 
 Mail: list_emails confirma una bandeja vacía con el conteo de Mail, read_email lee encabezados del índice, la respuesta encuentra el original de iCloud. Terminal: osascript dentro de bash -c/sh -c/eval se rechaza antes de correr; la sandbox no permite captura, Accesibilidad ni teclado. La bandeja ya no queda en una versión vieja. Calendar marca sus escrituras como acciones con efecto externo.
