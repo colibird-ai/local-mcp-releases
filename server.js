@@ -7,7 +7,7 @@
 import { McpServer } from "@modelcontextprotocol/sdk/server/mcp.js";
 import { StdioServerTransport } from "@modelcontextprotocol/sdk/server/stdio.js";
 
-const server = new McpServer({ name: "local-mcp", version: "3.0.427" });
+const server = new McpServer({ name: "local-mcp", version: "3.0.429" });
 
 const TOOLS = [
   ["agent_ack", "Tells the senders that this session read the messages agent_inbox returned, one message_id each, and takes..."],
@@ -329,6 +329,7 @@ const TOOLS = [
   ["explorer_list", "Lists files and folders in a directory."],
   ["explorer_search", "Searches for files by name recursively."],
   ["gdrive_set_scope", "Sets the active Google Drive root directory (when multiple accounts are synced)."],
+  ["m365_mark_email_read", "Use this when the user wants emails of their Microsoft 365 / Outlook account marked as read, or as unread w..."],
   ["outlook_calendar_create_event", "Creates a calendar event in Microsoft Outlook."],
   ["outlook_calendar_delete_event", "Deletes a calendar event from Outlook by EntryID (it goes to Deleted Items)."],
   ["outlook_calendar_list_events", "Lists upcoming calendar events from Microsoft Outlook on Windows."],
@@ -341,6 +342,7 @@ const TOOLS = [
   ["outlook_get_contact", "Gets detailed info for a specific Outlook contact by name."],
   ["outlook_list_accounts", "Lists configured email accounts in Outlook."],
   ["outlook_list_emails", "Lists recent emails from Microsoft Outlook on Windows."],
+  ["outlook_mark_email_read", "Use this when the user wants emails in the classic Outlook app on this PC marked as read, or as unread with..."],
   ["outlook_move_email", "Moves an Outlook email to a different folder."],
   ["outlook_read_email", "Reads the full content of an Outlook email by its EntryID."],
   ["outlook_reply_all", "Replies to all recipients of an Outlook email."],
