@@ -7,7 +7,7 @@
 import { McpServer } from "@modelcontextprotocol/sdk/server/mcp.js";
 import { StdioServerTransport } from "@modelcontextprotocol/sdk/server/stdio.js";
 
-const server = new McpServer({ name: "local-mcp", version: "3.0.429" });
+const server = new McpServer({ name: "local-mcp", version: "3.0.430" });
 
 const TOOLS = [
   ["agent_ack", "Tells the senders that this session read the messages agent_inbox returned, one message_id each, and takes..."],
@@ -98,6 +98,7 @@ const TOOLS = [
   ["lmcp_install_upgrade", "Checks for and installs a newer LMCP version — a self-upgrade of the LMCP app itself (not editing any of yo..."],
   ["lmcp_state", "Returns a structured snapshot of the LMCP environment: server and tray versions, detected AI client, cloud..."],
   ["lmcp_upgrade_diagnostics", "Returns LMCP's self-upgrade health (the LMCP app upgrading itself, not editing your data): current version,..."],
+  ["m365_create_contact", "Use this when the user wants a new contact added to their Microsoft 365 / Outlook contacts."],
   ["m365_create_draft", "Use this when the user wants an email prepared in their Microsoft 365 / Outlook account without sending it:..."],
   ["m365_create_email_folder", "Use this when the user wants a new mail folder in their Microsoft 365 / Outlook account: it is created on t..."],
   ["m365_create_event", "Creates an event in the connected Microsoft 365 / Outlook calendar."],
@@ -107,12 +108,15 @@ const TOOLS = [
   ["m365_list_email_folders", "Use this when the user wants the mail folders of their Microsoft 365 / Outlook account as the Exchange serv..."],
   ["m365_list_emails", "Use this when the user wants their Microsoft 365 / Outlook / Exchange inbox via the cloud — requires a conn..."],
   ["m365_list_events", "List upcoming calendar events from your Microsoft 365 / Outlook calendar."],
+  ["m365_mark_email_read", "Use this when the user wants emails of their Microsoft 365 / Outlook account marked as read, or as unread w..."],
   ["m365_move_email", "Use this when the user wants emails of their Microsoft 365 / Outlook account moved to another folder on the..."],
   ["m365_read_email", "Use this when the user wants the full content of a Microsoft 365 email (message ID from m365_list_emails/m3..."],
   ["m365_reply_email", "Use this when the user wants to reply to a Microsoft 365 email (message ID from m365_list_emails)."],
   ["m365_search_contacts", "Search contacts in your Microsoft 365 address book by name, email, or company."],
   ["m365_search_emails", "Use this when the user wants to find emails in their Microsoft 365 / Outlook mailbox via the cloud — requir..."],
   ["m365_send_email", "Use this when the user wants to send from their Microsoft 365 / Outlook account via the cloud — requires a..."],
+  ["m365_update_contact", "Use this when the user wants to change a contact of their Microsoft 365 / Outlook contacts: only the fields..."],
+  ["mark_email_read", "Use this when the user wants emails in the Mac's Apple Mail (Mail.app) marked as read, or as unread with un..."],
   ["media_probe", "Reports duration_ms, width, height, fps, whether it has audio, and file size for a video/audio file."],
   ["move_email", "Moves an email to another mailbox (nested target folders are found by name)."],
   ["music_add_to_playlist", "Adds library tracks to a playlist of the Music app, in the order given."],
@@ -325,11 +329,9 @@ const TOOLS = [
   ["zalo_send_message", "Sends a Zalo message to a conversation."],
   ["zoom_list_recordings", "Lists Zoom meeting recordings saved locally on this Mac (~/Documents/Zoom), newest first: meeting name, dat..."],
   ["zoom_read_transcript", "Reads the text artifacts of a local Zoom recording: the transcript/captions (.vtt or closed_caption.txt, cl..."],
-  ["echo", "Echoes the input text back."],
   ["explorer_list", "Lists files and folders in a directory."],
   ["explorer_search", "Searches for files by name recursively."],
   ["gdrive_set_scope", "Sets the active Google Drive root directory (when multiple accounts are synced)."],
-  ["m365_mark_email_read", "Use this when the user wants emails of their Microsoft 365 / Outlook account marked as read, or as unread w..."],
   ["outlook_calendar_create_event", "Creates a calendar event in Microsoft Outlook."],
   ["outlook_calendar_delete_event", "Deletes a calendar event from Outlook by EntryID (it goes to Deleted Items)."],
   ["outlook_calendar_list_events", "Lists upcoming calendar events from Microsoft Outlook on Windows."],
@@ -350,8 +352,9 @@ const TOOLS = [
   ["outlook_save_attachment", "Saves attachments from an Outlook email to a folder."],
   ["outlook_search_emails", "Searches Outlook emails by keyword in subject or body."],
   ["outlook_send_email", "Sends an email via Microsoft Outlook on Windows."],
-  ["run_qa", "Returns a QA test protocol listing every LMCP tool to test, with expected inputs and pass/fail criteria."],
-  ["submit_qa_report", "Submits a QA run report to the LMCP team."],
+  ["sharepoint_list_files", "Lists a SharePoint site's document libraries, or the files and folders in one."],
+  ["sharepoint_list_sites", "Lists the SharePoint sites the connected Microsoft 365 work or school account can open: {\"sites\": [each sit..."],
+  ["sharepoint_read_file", "Reads a text file from a SharePoint document library: `library` from sharepoint_list_files, `file` its path..."],
   ["todo_list_lists", "Lists task folders/lists in Outlook Tasks, including nested subfolders."],
   ["update_local_mcp", "Checks whether an LMCP update is available for this computer and whether one is already downloaded."],
   ["update_self_diagnosis", "Returns the self-update health state: current version, latest available, pending update status."],
