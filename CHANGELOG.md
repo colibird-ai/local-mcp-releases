@@ -1,3 +1,7 @@
+## v3.0.430 — 2026-10-31
+
+Link a computer from npx with a code, keep your relay token safe across reinstalls, and clearer onboarding and My apps. Many reliability fixes for AI clients.
+
 ## v3.0.429 — 2026-10-29
 
 Setup is quieter: LMCP configures your AI apps and tells you what it did, with no permission requests up front. macOS asks for each permission the first time a tool needs it. Mail is more reliable with real accounts and large mailboxes. Client configs with comments (JSONC) are read correctly. Clearer error messages, a calmer menu bar after a fresh install, and the installer now repairs a broken install. The relay status is the same everywhere it is shown.
