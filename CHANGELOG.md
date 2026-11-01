@@ -1,3 +1,7 @@
+## v3.0.431 — 2026-11-01
+
+Invite people to LMCP from the menu bar. The cloud connection now recovers on Macs moved with Migration Assistant. Smoother setup and permissions, with fixes for Warp, ChatGPT and sign-in.
+
 ## v3.0.430 — 2026-10-31
 
 Link a computer from npx with a code, keep your relay token safe across reinstalls, and clearer onboarding and My apps. Many reliability fixes for AI clients.
