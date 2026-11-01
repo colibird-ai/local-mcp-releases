@@ -7,7 +7,7 @@
 import { McpServer } from "@modelcontextprotocol/sdk/server/mcp.js";
 import { StdioServerTransport } from "@modelcontextprotocol/sdk/server/stdio.js";
 
-const server = new McpServer({ name: "local-mcp", version: "3.0.431" });
+const server = new McpServer({ name: "local-mcp", version: "3.0.432" });
 
 const TOOLS = [
   ["agent_ack", "Tells the senders that this session read the messages agent_inbox returned, one message_id each, and takes..."],
@@ -26,7 +26,6 @@ const TOOLS = [
   ["complete_omnifocus_task", "Marks an OmniFocus task as complete."],
   ["complete_reminder", "Marks a reminder complete in Apple Reminders (Reminders.app)."],
   ["configure_clients", "Adds Local MCP to the config of the MCP-capable AI apps installed on this Mac, from LMCP's client catalog (..."],
-  ["connect_chatgpt", "Connects this Mac to ChatGPT: creates (or repairs) the LMCP connector inside the user's ChatGPT account so..."],
   ["connect_m365_account", "Connect a Microsoft 365 account (or add another one, or sign one in again)."],
   ["connect_servicenow", "Connect ServiceNow."],
   ["connect_todoist", "Connect Todoist."],
