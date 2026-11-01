@@ -1,3 +1,7 @@
+## v3.0.432 — 2026-11-01
+
+Bug fixes: the menu bar panel no longer opens by itself, Microsoft To Do lists on personal accounts work, clearer error messages, and a retired tool was removed.
+
 ## v3.0.431 — 2026-11-01
 
 Invite people to LMCP from the menu bar. The cloud connection now recovers on Macs moved with Migration Assistant. Smoother setup and permissions, with fixes for Warp, ChatGPT and sign-in.
