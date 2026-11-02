@@ -1,3 +1,7 @@
+## v3.0.434 — 2026-11-02
+
+Fixes the LMCP window opening by itself over and over on some Macs after an update or reinstall.
+
 ## v3.0.433 — 2026-11-02
 
 Measures where setups leak: installer steps and account-link events.
