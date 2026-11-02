@@ -1,3 +1,7 @@
+## v3.0.433 — 2026-11-02
+
+Measures where setups leak: installer steps and account-link events.
+
 ## v3.0.432 — 2026-11-01
 
 Bug fixes: the menu bar panel no longer opens by itself, Microsoft To Do lists on personal accounts work, clearer error messages, and a retired tool was removed.
