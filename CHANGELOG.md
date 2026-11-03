@@ -1,3 +1,7 @@
+## v3.0.436 — 2026-11-03
+
+Linking this Mac to your account works again when LMCP asks you to approve it on this Mac. If this Mac's identity changes, LMCP shows how to recover it: approve it in My LMCP, or reinstall. LMCP also tells you when this Mac needs a free account, and shows account messages in the menu bar.
+
 ## v3.0.434 — 2026-11-02
 
 Fixes the LMCP window opening by itself over and over on some Macs after an update or reinstall.
