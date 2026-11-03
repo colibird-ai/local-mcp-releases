@@ -7,7 +7,7 @@
 import { McpServer } from "@modelcontextprotocol/sdk/server/mcp.js";
 import { StdioServerTransport } from "@modelcontextprotocol/sdk/server/stdio.js";
 
-const server = new McpServer({ name: "local-mcp", version: "3.0.434" });
+const server = new McpServer({ name: "local-mcp", version: "3.0.436" });
 
 const TOOLS = [
   ["agent_ack", "Tells the senders that this session read the messages agent_inbox returned, one message_id each, and takes..."],
@@ -66,7 +66,7 @@ const TOOLS = [
   ["gdrive_search_files", "Searches the synced Google Drive folder for files by name (recursive)."],
   ["gdrive_write_file", "Writes or overwrites a text file in the synced Google Drive folder — it uploads automatically via the offic..."],
   ["get_audit_log", "Returns recent LMCP tool call history from the local audit log."],
-  ["get_config", "Returns the current LMCP configuration: connected integrations, feature flags and license status."],
+  ["get_config", "Returns the current LMCP configuration: connected integrations and feature flags."],
   ["get_contact", "Gets a contact from the Mac's Contacts app (Contacts.app) by name or ID."],
   ["get_datetime", "Get the current date and time of the machine where LMCP runs — with timezone and UTC offset."],
   ["get_m365_person", "Get detailed information about a specific person in your Microsoft 365 directory by their user ID or email..."],
