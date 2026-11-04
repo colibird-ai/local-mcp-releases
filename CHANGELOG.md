@@ -1,3 +1,7 @@
+## v3.0.438 — 2026-11-04
+
+LMCP no longer jumps to the front when your AI app starts a session, and searching and reading Mail is faster and more reliable.
+
 ## v3.0.437 — 2026-11-04
 
 LMCP now helps you link this computer to your free LMCP account right when you open it, so your devices and support stay in one place. Telegram and expired-approval messages are clearer, and tool notices show up as a normal Mac notification. Bug fixes and stability improvements.
