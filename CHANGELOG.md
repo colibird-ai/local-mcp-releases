@@ -1,3 +1,7 @@
+## v3.0.437 — 2026-11-04
+
+LMCP now helps you link this computer to your free LMCP account right when you open it, so your devices and support stay in one place. Telegram and expired-approval messages are clearer, and tool notices show up as a normal Mac notification. Bug fixes and stability improvements.
+
 ## v3.0.436 — 2026-11-03
 
 Linking this Mac to your account works again when LMCP asks you to approve it on this Mac. If this Mac's identity changes, LMCP shows how to recover it: approve it in My LMCP, or reinstall. LMCP also tells you when this Mac needs a free account, and shows account messages in the menu bar.
