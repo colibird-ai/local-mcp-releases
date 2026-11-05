@@ -1,3 +1,7 @@
+## v3.0.439 — 2026-11-05
+
+3.0.439: marcas de contenido externo, Responder desde Enviados va al destinatario original (#1706), aviso cuando Mail descarta un borrador de respuesta anterior, cuenta en la primera apertura y arreglos de QA.
+
 ## v3.0.438 — 2026-11-04
 
 LMCP no longer jumps to the front when your AI app starts a session, and searching and reading Mail is faster and more reliable.
