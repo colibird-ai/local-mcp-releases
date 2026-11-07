@@ -7,7 +7,7 @@
 import { McpServer } from "@modelcontextprotocol/sdk/server/mcp.js";
 import { StdioServerTransport } from "@modelcontextprotocol/sdk/server/stdio.js";
 
-const server = new McpServer({ name: "local-mcp", version: "3.0.439" });
+const server = new McpServer({ name: "local-mcp", version: "3.0.440" });
 
 const TOOLS = [
   ["agent_ack", "Tells the senders that this session read the messages agent_inbox returned, one message_id each, and takes..."],
@@ -234,8 +234,10 @@ const TOOLS = [
   ["teams_list_channels", "Lists the channels of a Microsoft Teams team (team_id from teams_list_teams), by name, from Microsoft 365."],
   ["teams_list_chats", "Lists the Microsoft Teams chats of a Microsoft 365 account — direct messages, group chats and meeting chats..."],
   ["teams_list_teams", "Lists the Microsoft Teams teams the Microsoft 365 account belongs to, by name."],
+  ["teams_list_transcripts", "Lists the Microsoft Teams calls started from a chat and the calendar meetings that have a transcript, newes..."],
   ["teams_read_channel_messages", "Reads the most recent posts of a Microsoft Teams channel (team_id from teams_list_teams, channel_id from te..."],
   ["teams_read_chat_messages", "Reads the most recent messages of a Microsoft Teams chat (chat_id from teams_list_chats), oldest first, fro..."],
+  ["teams_read_transcript", "Reads the transcript of a Microsoft Teams call started from a chat or of a calendar meeting (transcript_id..."],
   ["teams_search_messages", "Searches the Microsoft Teams chat and channel messages of a Microsoft 365 account with Microsoft Search: by..."],
   ["teams_send_channel_message", "Sends a text message to a Microsoft Teams channel via Graph API."],
   ["teams_send_message", "Sends a text message to a Microsoft Teams chat as a connected Microsoft 365 work or school account (connect..."],
