@@ -1,3 +1,7 @@
+## v3.0.440 — 2026-11-07
+
+New: read meeting transcripts from Microsoft Teams calls and calendar meetings. Improved: WhatsApp no longer reports "not linked" during the first sync, and reads wait for a sync in progress instead of failing. Mail searches and lists on large mailboxes no longer time out as often. PDF reading gives clearer errors (permission, password, not a PDF) and refuses special files safely. Web automation reaches more page elements and explains failures better. New installs show a clear 3-step setup, and the first launch only reports "offline" when there really is no network. Updates are more reliable.
+
 ## v3.0.439 — 2026-11-05
 
 3.0.439: marcas de contenido externo, Responder desde Enviados va al destinatario original (#1706), aviso cuando Mail descarta un borrador de respuesta anterior, cuenta en la primera apertura y arreglos de QA.
