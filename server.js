@@ -7,9 +7,10 @@
 import { McpServer } from "@modelcontextprotocol/sdk/server/mcp.js";
 import { StdioServerTransport } from "@modelcontextprotocol/sdk/server/stdio.js";
 
-const server = new McpServer({ name: "local-mcp", version: "3.0.440" });
+const server = new McpServer({ name: "local-mcp", version: "3.0.442" });
 
 const TOOLS = [
+  ["add_contact_to_group", "Adds a contact of the Mac's Contacts app (Contacts.app), found by contact_id or by name, to an existing gro..."],
   ["agent_ack", "Tells the senders that this session read the messages agent_inbox returned, one message_id each, and takes..."],
   ["agent_authorize", "Decides whether this computer's installed Agent Mesh contract allows acting on one Mesh message, from the m..."],
   ["agent_checkin", "Announces this agent session to the mesh: its role, the repo it is working on and what it can do."],
@@ -31,6 +32,8 @@ const TOOLS = [
   ["connect_todoist", "Connect Todoist."],
   ["copy_email", "Copies an email into another mailbox of the Mac's Apple Mail (Mail.app); the original stays where it is."],
   ["create_calendar_event", "Creates an event in the Mac's Calendar app (Calendar.app)."],
+  ["create_contact", "Creates a contact in the Mac's Contacts app (Contacts.app, in its default account, usually iCloud): name, c..."],
+  ["create_contact_group", "Creates a group in the Mac's Contacts app (Contacts.app), in its default account."],
   ["create_draft", "Saves an email to the Mail.app Drafts folder for the user to review and send manually — it never sends."],
   ["create_email_folder", "Creates a mailbox folder in the Mac's Apple Mail (Mail.app), in one account."],
   ["create_note", "Creates a new note in Apple Notes."],
@@ -50,6 +53,7 @@ const TOOLS = [
   ["excel_create", "Creates a new Excel spreadsheet (.xlsx file) with headers and optional data rows."],
   ["excel_read", "Reads data from an Excel spreadsheet (.xlsx file)."],
   ["excel_write_cell", "Writes a value to a specific cell in an Excel file."],
+  ["fantastical_add_event", "(Beta) Adds an event or a task to Fantastical from one sentence, as typed in Fantastical's own field (\"Lunc..."],
   ["file_list", "Lists files and folders in a local directory."],
   ["file_read", "Reads a plain text file from the local filesystem by its absolute path — the primary, default tool for read..."],
   ["file_search", "Searches for files and folders by name (case-insensitive, partial match) starting from a root directory."],
@@ -155,6 +159,9 @@ const TOOLS = [
   ["outlook_diagnose", "Checks which email accounts are configured in Microsoft Outlook and compares them with Mail.app."],
   ["pdf_read", "Reads and extracts text from a PDF document (.pdf file)."],
   ["permissions_status", "Reports the TCC permission state (screen recording, accessibility, microphone) this app needs to capture th..."],
+  ["photos_export", "(Beta) Exports one photo or video from Apple Photos to a folder on this Mac (default ~/Downloads), as Photo..."],
+  ["photos_list_albums", "(Beta) Lists the albums of Apple Photos on this Mac: id, name and how many photos and videos each has."],
+  ["photos_search", "(Beta) Finds photos and videos in Apple Photos, newest first: taken between from and to, in one album, and/..."],
   ["ppt_create", "Creates a PowerPoint presentation (.pptx) at `path` from an array of slides, each {title, bullets:[…]}."],
   ["ppt_read", "Reads slide text content from a PowerPoint presentation (.pptx file)."],
   ["proton_disconnect", "Disconnects one Proton Mail account from Local MCP: removes the Bridge password stored for it from the macO..."],
@@ -252,6 +259,12 @@ const TOOLS = [
   ["telegram_unwatch_chats", "Stops the Telegram message notices telegram_watch_chats set up for this session: for `account`, or for ever..."],
   ["telegram_watch_chats", "Asks LMCP to tell this session when new messages arrive in chosen Telegram chats, so you do not have to kee..."],
   ["telegram_watch_status", "Says which Telegram chats this session is watching (telegram_watch_chats) and, per account, when they were..."],
+  ["things_complete_todo", "(Beta) Marks a to-do of Things 3 completed, by its id from things_list_todos; it goes to the logbook as whe..."],
+  ["things_create_todo", "(Beta) Creates a to-do in Things 3: in the inbox (default), in today, anytime or someday, or in one project..."],
+  ["things_list_areas", "(Beta) Lists the areas of Things 3: id, title and tags."],
+  ["things_list_projects", "(Beta) Lists the open projects of Things 3, or those of one area: id, title, notes, deadline, tags and area."],
+  ["things_list_todos", "(Beta) Lists to-dos of Things 3: those of one built-in list (inbox, today, anytime, upcoming, someday, logb..."],
+  ["things_update_todo", "(Beta) Changes a to-do of Things 3, by its id from things_list_todos: its title, notes, deadline, start dat..."],
   ["thunderbird_accounts_status", "Reports, per mail account of the Thunderbird profile on this computer, whether Local MCP can send from it:..."],
   ["thunderbird_disconnect", "Stops Local MCP from sending from one Thunderbird account: removes the password Local MCP stored for it fro..."],
   ["thunderbird_list_accounts", "Lists the mail accounts of the Thunderbird profile on this computer: id, name, address, type (imap, pop3 or..."],
@@ -277,6 +290,7 @@ const TOOLS = [
   ["ui_type", "Types text into the focused control (or focuses element_ref first, then types)."],
   ["ui_wait_for_element", "Deterministic synchronization — replaces all sleeps."],
   ["update_calendar_event", "Updates an existing event in the Mac's Calendar app (Calendar.app) by ID."],
+  ["update_contact", "Updates a contact in the Mac's Contacts app (Contacts.app), found by contact_id or by name."],
   ["update_note", "Updates an existing note in Apple Notes."],
   ["update_reminder", "Updates an existing reminder in Reminders.app."],
   ["video_blur_region", "Pixelates/blurs one or more rectangles over the video — the tool for redacting PII (an email pane, a name)..."],
@@ -333,6 +347,7 @@ const TOOLS = [
   ["explorer_list", "Lists files and folders in a directory."],
   ["explorer_search", "Searches for files by name recursively."],
   ["gdrive_set_scope", "Sets the active Google Drive root directory (when multiple accounts are synced)."],
+  ["m365_save_attachment", "Saves the attachments of a Microsoft 365 email to a folder: all of them, or one by attachment_id (the ids m..."],
   ["outlook_calendar_create_event", "Creates a calendar event in Microsoft Outlook."],
   ["outlook_calendar_delete_event", "Deletes a calendar event from Outlook by EntryID (it goes to Deleted Items)."],
   ["outlook_calendar_list_events", "Lists upcoming calendar events from Microsoft Outlook on Windows."],
