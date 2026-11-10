@@ -7,7 +7,7 @@
 import { McpServer } from "@modelcontextprotocol/sdk/server/mcp.js";
 import { StdioServerTransport } from "@modelcontextprotocol/sdk/server/stdio.js";
 
-const server = new McpServer({ name: "local-mcp", version: "3.0.442" });
+const server = new McpServer({ name: "local-mcp", version: "3.0.443" });
 
 const TOOLS = [
   ["add_contact_to_group", "Adds a contact of the Mac's Contacts app (Contacts.app), found by contact_id or by name, to an existing gro..."],
