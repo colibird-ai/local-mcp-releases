@@ -1,3 +1,14 @@
+## v3.0.443 — 2026-11-10
+
+This update makes LMCP steadier and clearer when something goes wrong.
+• Your Mac's device key is now always created and enrolled, and a Mac whose key was refused can start over as a new computer in one step.
+• The account screen says plainly that the account is free and needs no card.
+• Moving an email no longer starts a Mail step that can't finish in time.
+• WhatsApp keeps syncing when its local store fills up, and failed sends say whether to retry.
+• Web tools never return password or card field values.
+• Confirmations from the cloud relay only run what LMCP showed you first.
+• OpenCode's new configuration format is supported, and web AI connections explain why a check failed.
+
 ## v3.0.442 — 2026-11-08
 
 Create and update contacts and contact groups. Send to iMessage groups. Mail requests in Apple Mail and Microsoft 365: bcc, from a shared mailbox and attachments. The Agent Mesh is back, with a preview before create, invite and join. Monochrome menu-bar icon option. WhatsApp keeps syncing past 20,000 messages. A new install leaves the cloud relay off until you connect a web AI. Clearer messages when a computer has no account. Fixes for pdf_read, move_email, save_attachment and updates.
