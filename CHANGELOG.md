@@ -1,3 +1,14 @@
+## v3.0.445 — 2026-11-12
+
+This update makes LMCP clearer and safer.
+• The first screen says plainly that the account is free and needs no card.
+• Password and card fields, and the options of a secret list, are never read back by web tools.
+• The cloud relay reconnects cleanly after a network change.
+• Uninstalling LMCP closes every LMCP window and leaves nothing running behind.
+• After you quit LMCP, an update no longer opens it again.
+• Hermes setup no longer loops on «Check again».
+• A Mac whose connection key keeps being refused now explains why and offers to start over.
+
 ## v3.0.444 — 2026-11-11
 
 This update makes LMCP clearer and safer.
