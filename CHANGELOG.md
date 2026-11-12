@@ -1,3 +1,7 @@
+## v3.0.446 — 2026-11-12
+
+Bug fixes and reliability improvements: clearer account status for AI assistants, more dependable Mail actions, smoother uninstall and update flows.
+
 ## v3.0.445 — 2026-11-12
 
 This update makes LMCP clearer and safer.
