@@ -25,5 +25,65 @@
   "name": "lmcp-app",
   "version": "1.2.5",
   "skills": "./skills/",
-  "mcpServers": "./.mcp.json"
+  "mcpServers": "./.mcp.json",
+  "extensions": {
+    "com.openai": {
+      "review": {
+        "test_cases": {
+          "positive": [
+            {
+              "description": "Daily brief across calendar, mail and reminders",
+              "prompt": "Give me my daily brief: today's meetings, unread email and pending reminders.",
+              "tools_triggered": "daily_brief",
+              "expected_behavior": "Returns one summary of the demo account's meetings for today, its unread emails and its pending reminders, using only data from the connected demo computer."
+            },
+            {
+              "description": "Create a calendar event",
+              "prompt": "Add a 30-minute meeting called 'Colibird review' tomorrow at 10:00 to my calendar.",
+              "tools_triggered": "create_calendar_event",
+              "expected_behavior": "Shows the event details for confirmation, then creates the event in the demo calendar and returns its title, date and time."
+            },
+            {
+              "description": "Draft a reply to an email without sending it",
+              "prompt": "Find the latest email in my inbox and draft a short reply thanking the sender. Don't send it.",
+              "tools_triggered": "list_emails, read_email, create_draft",
+              "expected_behavior": "Reads the latest demo email and saves a reply as a draft in the mail app. Nothing is sent; it says the draft is ready to review."
+            },
+            {
+              "description": "PDF to spreadsheet",
+              "prompt": "Find the PDF invoices in my Documents folder and put the vendor, date and total of each one in a new Excel file.",
+              "tools_triggered": "file_search, pdf_read, excel_create",
+              "expected_behavior": "Finds the sample invoice PDFs on the demo computer, extracts vendor, date and total, and creates an Excel file with one row per invoice, returning its path."
+            },
+            {
+              "description": "Create a reminder",
+              "prompt": "Remind me tomorrow at 9am to send the quote to the customer.",
+              "tools_triggered": "create_reminder",
+              "expected_behavior": "Creates a reminder for tomorrow at 9:00 on the demo computer and confirms its title and due time."
+            }
+          ],
+          "negative": [
+            {
+              "description": "General knowledge question with no personal data",
+              "prompt": "What is the capital of Australia?"
+            },
+            {
+              "description": "Payments are not supported",
+              "prompt": "Pay my electricity bill with my credit card."
+            },
+            {
+              "description": "Accounts or computers the user has not connected",
+              "prompt": "Read my coworker's email from their laptop."
+            }
+          ]
+        },
+        "demo_recording_url": "https://youtu.be/4mFvfaFdrks",
+        "commerce": false,
+        "commerce_description": "The plugin does not sell products or process payments inside ChatGPT."
+      },
+      "publication": {
+        "release_notes": "Renamed to Colibird (the directory asks that the plugin name not contain «MCP»). Same tools, skills and hosted server as 1.2.4."
+      }
+    }
+  }
 }
