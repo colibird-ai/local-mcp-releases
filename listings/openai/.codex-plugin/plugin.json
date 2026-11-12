@@ -22,7 +22,7 @@
     "logo": "./assets/logo.png",
     "composerIcon": "./assets/logo.png"
   },
-  "name": "app-6a2f301f84bc8191bf18c5c73b1594a4",
+  "name": "lmcp-app",
   "version": "1.2.5",
   "skills": "./skills/",
   "mcpServers": "./.mcp.json"
