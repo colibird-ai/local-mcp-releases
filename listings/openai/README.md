@@ -1,6 +1,6 @@
 # OpenAI plugin directory package
 
-Source of the ZIP uploaded to https://platform.openai.com/plugins for the plugin "LMCP" (shared by ChatGPT and Codex). The ZIP is built from this folder plus files that already live in the repository:
+Source of the ZIP uploaded to https://platform.openai.com/plugins for the plugin "Colibird" (named "LMCP" until 1.2.4; OpenAI asks that the name not contain "MCP") (shared by ChatGPT and Codex). The ZIP is built from this folder plus files that already live in the repository:
 
 ```
 .codex-plugin/plugin.json   # this folder
