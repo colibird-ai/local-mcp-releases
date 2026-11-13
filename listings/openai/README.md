@@ -1,6 +1,6 @@
 # OpenAI plugin directory package
 
-Source of the ZIP uploaded to https://platform.openai.com/plugins for the plugin "LMCP" (shared by ChatGPT and Codex). The ZIP is built from this folder plus files that already live in the repository:
+Source of the ZIP uploaded to https://platform.openai.com/plugins for the plugin "Colibird" (named "LMCP" until 1.2.4; OpenAI asks that the name not contain "MCP") (shared by ChatGPT and Codex). The ZIP is built from this folder plus files that already live in the repository:
 
 ```
 .codex-plugin/plugin.json   # this folder
@@ -22,7 +22,7 @@ d=$(mktemp -d) && cp -R listings/openai/.codex-plugin listings/openai/.mcp.json 
 
 ## What the portal checks on upload (learned on 2026-10-09)
 
-- Bump `version` in `plugin.json` on every upload; `name` stays `app-6a2f301f84bc8191bf18c5c73b1594a4` (the existing plugin).
+- Bump `version` in `plugin.json` on every upload; `name` is `lmcp-app`, the package name of the plugin plugin_asdk_app_6ae082d1… (the old app-6a2f301f… is a different plugin, still published: do not touch it).
 - The package must declare the plugin's existing MCP (`mcpServers` → `.mcp.json`, same URL). Without it: "This package omits the plugin's existing MCP". The ZIP that "Download release ZIP" returns does not include that declaration, nor the icon or skills.
 - An icon is required (`interface.logo` / `interface.composerIcon`).
 - Only one review can be active: "Cancel review" before uploading a new version.
