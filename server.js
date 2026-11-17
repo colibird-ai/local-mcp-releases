@@ -7,7 +7,7 @@
 import { McpServer } from "@modelcontextprotocol/sdk/server/mcp.js";
 import { StdioServerTransport } from "@modelcontextprotocol/sdk/server/stdio.js";
 
-const server = new McpServer({ name: "local-mcp", version: "3.0.446" });
+const server = new McpServer({ name: "local-mcp", version: "3.0.448" });
 
 const TOOLS = [
   ["add_contact_to_group", "Adds a contact of the Mac's Contacts app (Contacts.app), found by contact_id or by name, to an existing gro..."],
@@ -137,6 +137,7 @@ const TOOLS = [
   ["m365_move_email", "Use this when the user wants emails of their Microsoft 365 / Outlook account moved to another folder on the..."],
   ["m365_read_email", "Use this when the user wants the full content of a Microsoft 365 email (message ID from m365_list_emails/m3..."],
   ["m365_reply_email", "Use this when the user wants to reply to a Microsoft 365 email (message ID from m365_list_emails)."],
+  ["m365_save_attachment", "(Beta) Saves the attachments of a Microsoft 365 email to a folder: all of them, or one by attachment_id (th..."],
   ["m365_search_contacts", "Search contacts in your Microsoft 365 address book by name, email, or company."],
   ["m365_search_emails", "Use this when the user wants to find emails in their Microsoft 365 / Outlook mailbox via the cloud — requir..."],
   ["m365_send_email", "Use this when the user wants to send from their Microsoft 365 / Outlook account via the cloud — requires a..."],
@@ -263,10 +264,10 @@ const TOOLS = [
   ["teams_list_channels", "Lists the channels of a Microsoft Teams team (team_id from teams_list_teams), by name, from Microsoft 365."],
   ["teams_list_chats", "Lists the Microsoft Teams chats of a Microsoft 365 account — direct messages, group chats and meeting chats..."],
   ["teams_list_teams", "Lists the Microsoft Teams teams the Microsoft 365 account belongs to, by name."],
-  ["teams_list_transcripts", "Lists the Microsoft Teams calls started from a chat and the calendar meetings that have a transcript, newes..."],
+  ["teams_list_transcripts", "(Beta) Lists the Microsoft Teams calls started from a chat and the calendar meetings that have a transcript..."],
   ["teams_read_channel_messages", "Reads the most recent posts of a Microsoft Teams channel (team_id from teams_list_teams, channel_id from te..."],
   ["teams_read_chat_messages", "Reads the most recent messages of a Microsoft Teams chat (chat_id from teams_list_chats), oldest first, fro..."],
-  ["teams_read_transcript", "Reads the transcript of a Microsoft Teams call started from a chat or of a calendar meeting (transcript_id..."],
+  ["teams_read_transcript", "(Beta) Reads the transcript of a Microsoft Teams call started from a chat or of a calendar meeting (transcr..."],
   ["teams_search_messages", "Searches the Microsoft Teams chat and channel messages of a Microsoft 365 account with Microsoft Search: by..."],
   ["teams_send_channel_message", "Sends a text message to a Microsoft Teams channel via Graph API."],
   ["teams_send_message", "Sends a text message to a Microsoft Teams chat as a connected Microsoft 365 work or school account (connect..."],
@@ -387,7 +388,6 @@ const TOOLS = [
   ["explorer_list", "Lists files and folders in a directory."],
   ["explorer_search", "Searches for files by name recursively."],
   ["gdrive_set_scope", "Sets the active Google Drive root directory (when multiple accounts are synced)."],
-  ["m365_save_attachment", "Saves the attachments of a Microsoft 365 email to a folder: all of them, or one by attachment_id (the ids m..."],
   ["outlook_calendar_create_event", "Creates a calendar event in Microsoft Outlook."],
   ["outlook_calendar_delete_event", "Deletes a calendar event from Outlook by EntryID (it goes to Deleted Items)."],
   ["outlook_calendar_list_events", "Lists upcoming calendar events from Microsoft Outlook on Windows."],
