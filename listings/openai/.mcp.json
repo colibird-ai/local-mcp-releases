@@ -2,7 +2,7 @@
   "mcpServers": {
     "lmcp": {
       "type": "streamable-http",
-      "url": "https://www.local-mcp.com/mcp"
+      "url": "https://local-mcp.com/mcp"
     }
   }
 }
