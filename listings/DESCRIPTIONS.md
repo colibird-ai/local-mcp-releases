@@ -31,7 +31,7 @@ One set of copy for every directory. Copy from here; do not rewrite per channel.
 | Category | Productivity |
 | Platforms | macOS 13+ and Windows 10+ (64-bit). Linux, iOS and Android are not supported. |
 | Transport | stdio (`npx -y local-mcp@latest`); remote Streamable HTTP with OAuth at `https://www.local-mcp.com/mcp` for web AIs |
-| License | Documentation, scripts and plugin manifests: MIT. The LMCP app binary is proprietary (see `LICENSE`). |
+| License | Documentation, scripts and plugin manifests: MIT. The LMCP app binary is proprietary (see `LICENSE-BINARY.md`). |
 
 ## Icon
 
