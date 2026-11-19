@@ -1,3 +1,7 @@
+## v3.0.450 — 2026-11-19
+
+Tells the person when the Mac is cut for lack of an account or at the Free limit (behind a server switch, off). Microsoft 365 mail sends local files. Cut Macs with a refused key get a way out. LMCP windows are visible to captures and remote desktop. A click on the icon during the link approval says it waits. The account link is offered at most once per opening.
+
 ## v3.0.448 — 2026-11-17
 
 Typing into apps now brings the right window to the front first, or stops without typing. Replies with attachments confirm the send, PDF reading no longer mistakes a logo for a missing text layer, OneDrive and closed apps explain what's needed, WhatsApp reads say when a sync is running, Teams transcripts arrive in the beta channel, and many smaller reliability fixes for Mail, Calendar and Reminders.
