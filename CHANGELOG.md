@@ -1,3 +1,7 @@
+## v3.0.451 — 2026-11-22
+
+El índice de búsqueda en el cuerpo de los correos ya no frena el disco: trabaja con prioridad baja, queda fuera de Time Machine y, con el índice completo, sólo revisa las carpetas que cambiaron.
+
 ## v3.0.450 — 2026-11-19
 
 Tells the person when the Mac is cut for lack of an account or at the Free limit (behind a server switch, off). Microsoft 365 mail sends local files. Cut Macs with a refused key get a way out. LMCP windows are visible to captures and remote desktop. A click on the icon during the link approval says it waits. The account link is offered at most once per opening.
