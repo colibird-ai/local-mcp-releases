@@ -1,3 +1,7 @@
+## v3.0.452 — 2026-11-24
+
+LM Studio Bionic gets LMCP configured. A computer that cannot be linked offers Start over, and a key the keychain did not sign offers Recover key. Clearer Microsoft 365 sign-in, calendar and Google Drive errors.
+
 ## v3.0.451 — 2026-11-22
 
 El índice de búsqueda en el cuerpo de los correos ya no frena el disco: trabaja con prioridad baja, queda fuera de Time Machine y, con el índice completo, sólo revisa las carpetas que cambiaron.
