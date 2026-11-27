@@ -8,7 +8,7 @@ One set of copy for every directory. Copy from here; do not rewrite per channel.
 - No version numbers and no tool counts in copy that a third party hosts: nobody updates it after a release, so it goes stale (on 2026-10-09 the live listings said 82, 188+, 191+, 244, 255 and 290 tools). Use `@latest` in install lines. The release pipeline keeps the numbers that it writes itself (README, repository description).
 - Nothing about pricing, plans, free tiers or charging. Do not write "free", "paid", "trial" or "premium".
 - Do not add platform qualifiers such as "(Mac)" or "(Windows)" to an app name. WhatsApp and Outlook work on Mac and Windows (on the Mac, Outlook mail and calendar go through the Microsoft 365 tools). A limit of one platform (the Notion tools, for example, are in the Mac catalog only) belongs in its guide, not in listing copy.
-- Say that the tools run on the user's computer, that the LMCP app is installed first, and that web AIs connect through an optional relay (Cloud Data Forwarding, off by default).
+- Say that the tools run on the user's computer, that the LMCP app is installed first, and that web AIs connect through a relay (Cloud Data Forwarding: on by default on Mac, off on Windows, turned off with "Cloud access" in the LMCP menu).
 - Do not call it "100% local", "private" or "GDPR compliant". The AI provider still receives the content the user asks it to process.
 
 ## Identity
@@ -53,7 +53,7 @@ Where a directory limits length, cut at a sentence boundary in this order and ke
 
 > LMCP is a local MCP server that lets your AI assistant work with the apps and files on your own computer. It provides tools for Mail, Calendar, Contacts, Microsoft Teams, Slack, WhatsApp, OneDrive, Google Drive, Notion, Outlook, Word, Excel, PowerPoint and PDF files, local files and more. Availability varies by platform.
 >
-> The tools run on your computer, on macOS 13+ and Windows 10+ (64-bit). Install the LMCP app first; your AI client then starts the server with `npx -y local-mcp@latest`, or through a plugin or extension for Claude Code, Codex, GitHub Copilot CLI, Gemini CLI and Cursor. Web assistants such as ChatGPT, Claude.ai, Grok and Perplexity connect through an optional relay at https://www.local-mcp.com/mcp using OAuth; it requires Cloud Data Forwarding, which is off by default.
+> The tools run on your computer, on macOS 13+ and Windows 10+ (64-bit). Install the LMCP app first; your AI client then starts the server with `npx -y local-mcp@latest`, or through a plugin or extension for Claude Code, Codex, GitHub Copilot CLI, Gemini CLI and Cursor. Web assistants such as ChatGPT, Claude.ai, Grok and Perplexity connect through an optional relay at https://www.local-mcp.com/mcp using OAuth; it requires Cloud Data Forwarding, which is on by default on Mac and off on Windows and is turned off with "Cloud access" in the LMCP menu.
 >
 > Permissions are granted per app, and you review actions before authorizing them. Your AI provider still receives the content you ask it to process. Documentation and manifests are MIT licensed; the LMCP app is proprietary.
 
